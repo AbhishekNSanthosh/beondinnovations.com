@@ -87,9 +87,10 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`md:hidden bg-white border-t border-neutral-100 px-[5vw] flex flex-col gap-3 overflow-hidden transition-all duration-300 ease-in-out ${
-          open ? "py-4 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+        className={`md:hidden bg-white border-t border-neutral-100 px-[5vw] flex flex-col gap-3 overflow-hidden transition-[height,opacity] duration-300 ease-in-out ${
+          open ? "py-4 opacity-100" : "opacity-0 pointer-events-none"
         }`}
+        style={{ height: open ? "calc(100vh - 4rem)" : "0px" }}
       >
         {links.map((l) => (
           <a
@@ -109,7 +110,7 @@ export default function Navbar() {
           Get in touch
         </a>
 
-        <div className="mt-2 pt-4 pb-2 border-t border-neutral-100 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div className="mt-2 absolute bottom-0 left-0 right-0 pt-4 pb-2 border-t border-neutral-100 flex flex-col sm:flex-row justify-between items-center gap-2">
           <p className="text-xs text-neutral-400">
             &copy; {new Date().getFullYear()} Beond Innovations LLP. All rights reserved.
           </p>

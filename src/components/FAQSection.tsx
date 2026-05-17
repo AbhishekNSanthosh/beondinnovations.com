@@ -30,19 +30,19 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 bg-white">
+    <section id="faq" className="py-12 lg:py-24 bg-white">
       <div className="px-[5vw]">
-        <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 items-start">
           <FadeUp className="lg:sticky lg:top-28 lg:w-72 flex-shrink-0">
             <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
               FAQ
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-5">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-3 lg:mb-5">
               Common questions
             </h2>
             <p className="text-neutral-500 text-sm leading-relaxed">
               Don&apos;t see your question here?{" "}
-              <a href="mailto:hello@beondinnovations.com" className="text-emerald-600 hover:underline">
+              <a href="mailto:beondinnovations@gmail.com" className="text-emerald-600 hover:underline">
                 Just ask us directly.
               </a>
             </p>

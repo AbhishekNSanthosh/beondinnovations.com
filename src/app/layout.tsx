@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
+import SplashScreen from "@/components/SplashScreen";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -79,7 +80,7 @@ const jsonLd = {
   legalName: "Beond Innovations LLP",
   url: siteUrl,
   logo: `${siteUrl}/icon.png`,
-  email: "hello@beondinnovations.com",
+  email: "beondinnovations@gmail.com",
   foundingLocation: {
     "@type": "Place",
     addressRegion: "Kerala",
@@ -110,6 +111,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <SplashScreen />
         {children}
       </body>
     </html>

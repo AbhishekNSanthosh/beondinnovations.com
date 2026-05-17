@@ -54,138 +54,210 @@ export default function Footer() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
       <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[300px] rounded-full bg-emerald-500/5 blur-3xl" />
 
-      {/* Watermark wordmark */}
-      <div
-        className="pointer-events-none select-none absolute bottom-10 right-[3vw] text-[14vw] font-black leading-none tracking-tighter text-white/[0.025]"
-        aria-hidden
-      >
-        beond.
-      </div>
+      {/* ── MOBILE LAYOUT (hidden on lg+) ── */}
+      <div className="lg:hidden relative flex flex-col items-center text-center px-6 pt-12 pb-8 gap-8">
 
-      {/* Main content */}
-      <div className="relative px-[5vw] pt-20 pb-14">
-        <div className="flex flex-col lg:flex-row justify-between gap-14">
-          {/* Brand column */}
-          <div className="max-w-sm">
-            <a href="#" className="inline-flex items-baseline gap-0.5 group">
-              <span className="text-white font-black text-3xl tracking-tight">beond</span>
-              <span className="text-emerald-500 text-3xl font-black group-hover:text-emerald-400 transition-colors">.</span>
-            </a>
-            <p className="text-sm leading-relaxed mt-4 text-neutral-400 max-w-[260px]">
-              Building software that moves businesses beyond what&apos;s possible today.
-            </p>
-
-            {/* Social icons */}
-            <div className="flex items-center gap-2.5 mt-7">
-              {socialLinks.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  aria-label={s.label}
-                  className="group/icon w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-800 text-neutral-500 hover:text-emerald-400 hover:border-emerald-500/40 hover:bg-emerald-500/8 transition-all duration-200"
-                >
-                  {s.icon}
-                </a>
-              ))}
-            </div>
-
-            {/* Status pill */}
-            <div className="mt-7 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-xs text-emerald-400">
-              <span className="relative flex h-1.5 w-1.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
-              </span>
-              Available for new projects
-            </div>
+        {/* Logo + tagline */}
+        <div className="flex flex-col items-center gap-3">
+          <a href="#" className="inline-flex items-baseline gap-0.5">
+            <span className="text-white font-black text-2xl tracking-tight">beond</span>
+            <span className="text-emerald-500 text-2xl font-black">.</span>
+          </a>
+          <p className="text-sm leading-relaxed text-neutral-500 max-w-[260px]">
+            Building software that moves businesses beyond what&apos;s possible today.
+          </p>
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-[10px] text-emerald-400">
+            <span className="relative flex h-1.5 w-1.5">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
+            </span>
+            Available for new projects
           </div>
+        </div>
 
-          {/* Link columns */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-10 lg:gap-20">
-            <div>
-              <p className="text-white text-xs font-semibold uppercase tracking-widest mb-5">
-                Navigate
-              </p>
-              <ul className="space-y-3.5">
-                {navLinks.map((l) => (
-                  <li key={l.label}>
-                    <a
-                      href={l.href}
-                      className="text-sm text-neutral-500 hover:text-white transition-colors duration-200 flex items-center gap-1.5 group/link"
-                    >
-                      <span className="w-0 group-hover/link:w-3 h-px bg-emerald-500 transition-all duration-200 overflow-hidden" />
-                      {l.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        {/* CTA */}
+        <a
+          href="#contact"
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-500 text-neutral-950 text-sm font-semibold active:scale-95 transition-all duration-150"
+        >
+          Let&apos;s work together
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2">
+            <path d="M2 7h10M7 2l5 5-5 5" />
+          </svg>
+        </a>
 
-            <div>
-              <p className="text-white text-xs font-semibold uppercase tracking-widest mb-5">
-                Services
-              </p>
-              <ul className="space-y-3.5">
-                {["Web Development", "Mobile Apps", "API & Backend", "UI/UX Design"].map((s) => (
-                  <li key={s}>
-                    <a
-                      href="#services"
-                      className="text-sm text-neutral-500 hover:text-white transition-colors duration-200 flex items-center gap-1.5 group/link"
-                    >
-                      <span className="w-0 group-hover/link:w-3 h-px bg-emerald-500 transition-all duration-200 overflow-hidden" />
-                      {s}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
+        {/* Social icons */}
+        <div className="flex items-center gap-4">
+          {socialLinks.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              aria-label={s.label}
+              className="w-10 h-10 flex items-center justify-center rounded-xl border border-neutral-800 text-neutral-500 active:text-emerald-400 active:border-emerald-500/40 transition-colors"
+            >
+              {s.icon}
+            </a>
+          ))}
+        </div>
 
-            <div>
-              <p className="text-white text-xs font-semibold uppercase tracking-widest mb-5">
-                Office
-              </p>
-              <address className="not-italic text-sm leading-relaxed text-neutral-500 space-y-1">
-                <p>PB102, Carmel College of</p>
-                <p>Engineering & Technology</p>
-                <p>Punnapra, Alappuzha</p>
-                <p>Kerala – 688004, India</p>
-              </address>
-              <a
-                href="mailto:beondinnovations@gmail.com"
-                className="inline-flex items-center gap-1 mt-4 text-xs text-emerald-500 hover:text-emerald-400 transition-colors"
-              >
-                beondinnovations@gmail.com
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M1.5 8.5l7-7M8.5 1.5H3M8.5 1.5v5.5" />
-                </svg>
-              </a>
-              <a
-                href="tel:+917907247909"
-                className="inline-flex items-center gap-1 mt-2 text-xs text-emerald-500 hover:text-emerald-400 transition-colors"
-              >
-                +91 7907247909
-                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <path d="M1.5 8.5l7-7M8.5 1.5H3M8.5 1.5v5.5" />
-                </svg>
-              </a>
-            </div>
+        {/* Nav chips */}
+        <div className="w-full flex gap-2 flex-wrap justify-center">
+          {navLinks.map((l) => (
+            <a
+              key={l.label}
+              href={l.href}
+              className="px-3.5 py-1.5 rounded-full border border-neutral-800 text-xs text-neutral-400 transition-colors"
+            >
+              {l.label}
+            </a>
+          ))}
+        </div>
+
+        {/* Contact */}
+        <div className="flex flex-col items-center gap-2 w-full">
+          <a
+            href="mailto:beondinnovations@gmail.com"
+            className="flex items-center gap-2 text-xs text-neutral-500"
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className="text-emerald-500 shrink-0">
+              <rect x="2" y="4" width="20" height="16" rx="2" /><path d="M2 7l10 7 10-7" />
+            </svg>
+            beondinnovations@gmail.com
+          </a>
+          <a
+            href="tel:+917907247909"
+            className="flex items-center gap-2 text-xs text-neutral-500"
+          >
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className="text-emerald-500 shrink-0">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.78 19.78 0 01.07 4.91 2 2 0 012 2.69h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 10.1a16 16 0 006.22 6.22l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+            </svg>
+            +91 7907247909
+          </a>
+        </div>
+
+        {/* Divider */}
+        <div className="w-full h-px bg-neutral-800/60" />
+
+        {/* Copyright */}
+        <div className="flex flex-col items-center gap-1">
+          <p className="text-[10px] text-neutral-600">
+            &copy; {new Date().getFullYear()} Beond Innovations LLP. All rights reserved.
+          </p>
+          <div className="flex items-center gap-1.5 text-[10px] text-neutral-600">
+            <span>Crafted with</span>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-700" />
+            <span>in Kerala, India</span>
           </div>
         </div>
       </div>
 
-      {/* Divider */}
-      <div className="relative px-[5vw]">
-        <div className="h-px bg-gradient-to-r from-transparent via-neutral-800 to-transparent" />
-      </div>
+      {/* ── DESKTOP LAYOUT (hidden below lg) ── */}
+      <div className="hidden lg:block">
+        {/* Watermark wordmark */}
+        <div
+          className="pointer-events-none select-none absolute bottom-10 right-[3vw] text-[14vw] font-black leading-none tracking-tighter text-white/[0.025] whitespace-nowrap"
+          aria-hidden
+        >
+          beond.
+        </div>
 
-      {/* Bottom bar */}
-      <div className="relative px-[5vw] py-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-        <p className="text-xs text-neutral-600">
-          &copy; {new Date().getFullYear()} Beond Innovations LLP. All rights reserved.
-        </p>
-        <div className="flex items-center gap-1.5 text-xs text-neutral-600">
-          <span>Crafted with</span>
-          <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600" />
-          <span>in Kerala, India</span>
+        <div className="relative px-[5vw] pt-20 pb-14">
+          <div className="flex flex-row justify-between gap-14">
+            {/* Brand column */}
+            <div className="max-w-sm">
+              <a href="#" className="inline-flex items-baseline gap-0.5 group">
+                <span className="text-white font-black text-3xl tracking-tight">beond</span>
+                <span className="text-emerald-500 text-3xl font-black group-hover:text-emerald-400 transition-colors">.</span>
+              </a>
+              <p className="text-sm leading-relaxed mt-4 text-neutral-400 max-w-[260px]">
+                Building software that moves businesses beyond what&apos;s possible today.
+              </p>
+              <div className="flex items-center gap-2.5 mt-7">
+                {socialLinks.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    aria-label={s.label}
+                    className="group/icon w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-800 text-neutral-500 hover:text-emerald-400 hover:border-emerald-500/40 hover:bg-emerald-500/8 transition-all duration-200"
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
+              <div className="mt-7 inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 text-xs text-emerald-400">
+                <span className="relative flex h-1.5 w-1.5">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500" />
+                </span>
+                Available for new projects
+              </div>
+            </div>
+
+            {/* Link columns */}
+            <div className="grid grid-cols-3 gap-20">
+              <div>
+                <p className="text-white text-xs font-semibold uppercase tracking-widest mb-5">Navigate</p>
+                <ul className="space-y-3.5">
+                  {navLinks.map((l) => (
+                    <li key={l.label}>
+                      <a href={l.href} className="text-sm text-neutral-500 hover:text-white transition-colors duration-200 flex items-center gap-1.5 group/link">
+                        <span className="w-0 group-hover/link:w-3 h-px bg-emerald-500 transition-all duration-200 overflow-hidden" />
+                        {l.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-white text-xs font-semibold uppercase tracking-widest mb-5">Services</p>
+                <ul className="space-y-3.5">
+                  {["Web Development", "Mobile Apps", "API & Backend", "UI/UX Design"].map((s) => (
+                    <li key={s}>
+                      <a href="#services" className="text-sm text-neutral-500 hover:text-white transition-colors duration-200 flex items-center gap-1.5 group/link">
+                        <span className="w-0 group-hover/link:w-3 h-px bg-emerald-500 transition-all duration-200 overflow-hidden" />
+                        {s}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="text-white text-xs font-semibold uppercase tracking-widest mb-5">Office</p>
+                <address className="not-italic text-sm leading-relaxed text-neutral-500 space-y-1">
+                  <p>PB102, Carmel College of</p>
+                  <p>Engineering & Technology</p>
+                  <p>Punnapra, Alappuzha</p>
+                  <p>Kerala – 688004, India</p>
+                </address>
+                <a href="mailto:beondinnovations@gmail.com" className="inline-flex items-center gap-1 mt-4 text-xs text-emerald-500 hover:text-emerald-400 transition-colors">
+                  beondinnovations@gmail.com
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M1.5 8.5l7-7M8.5 1.5H3M8.5 1.5v5.5" />
+                  </svg>
+                </a>
+                <a href="tel:+917907247909" className="inline-flex items-center gap-1 mt-2 text-xs text-emerald-500 hover:text-emerald-400 transition-colors">
+                  +91 7907247909
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M1.5 8.5l7-7M8.5 1.5H3M8.5 1.5v5.5" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative px-[5vw]">
+          <div className="h-px bg-gradient-to-r from-transparent via-neutral-800 to-transparent" />
+        </div>
+        <div className="relative px-[5vw] py-6 flex flex-row justify-between items-center">
+          <p className="text-xs text-neutral-600">
+            &copy; {new Date().getFullYear()} Beond Innovations LLP. All rights reserved.
+          </p>
+          <div className="flex items-center gap-1.5 text-xs text-neutral-600">
+            <span>Crafted with</span>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600" />
+            <span>in Kerala, India</span>
+          </div>
         </div>
       </div>
     </footer>

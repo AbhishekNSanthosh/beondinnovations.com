@@ -238,7 +238,7 @@ export default function Home() {
               <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-4">
                 What we do
               </p>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
                 Services
               </h2>
             </div>
@@ -317,14 +317,14 @@ export default function Home() {
       </section>
 
       {/* Featured Work */}
-      <section id="work" className="py-24 bg-white">
+      <section id="work" className="py-12 lg:py-24 bg-white">
         <div className="px-[5vw]">
-          <FadeUp className="mb-16 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+          <FadeUp className="mb-10 lg:mb-16 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
               <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 Featured work
               </p>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
                 Projects we&apos;re proud of
               </h2>
             </div>
@@ -380,13 +380,13 @@ export default function Home() {
       </section>
 
       {/* Stats Strip */}
-      <section className="py-20 bg-neutral-950">
+      <section className="py-10 lg:py-20 bg-neutral-950">
         <div className="px-[5vw]">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-800">
             {stats.map((s, i) => (
               <FadeUp key={s.label} delay={i * 80}>
                 <div className="bg-neutral-950 px-8 py-10 flex flex-col items-center text-center">
-                  <p className="text-4xl md:text-5xl font-black text-white tracking-tight">{s.value}</p>
+                  <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">{s.value}</p>
                   <p className="text-neutral-500 text-sm mt-2 leading-snug">{s.label}</p>
                 </div>
               </FadeUp>
@@ -403,7 +403,7 @@ export default function Home() {
               <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
                 About us
               </p>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-6">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-6">
                 Small team.{" "}
                 <span className="text-emerald-600">Big outcomes.</span>
               </h2>
@@ -418,15 +418,15 @@ export default function Home() {
               </p>
               <div className="flex gap-12">
                 <div>
-                  <p className="text-3xl font-bold text-neutral-900">10+</p>
+                  <p className="text-2xl md:text-3xl font-bold text-neutral-900">10+</p>
                   <p className="text-sm text-neutral-500 mt-1">Projects delivered</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-neutral-900">100%</p>
+                  <p className="text-2xl md:text-3xl font-bold text-neutral-900">100%</p>
                   <p className="text-sm text-neutral-500 mt-1">Client satisfaction</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-neutral-900">Fast</p>
+                  <p className="text-2xl md:text-3xl font-bold text-neutral-900">Fast</p>
                   <p className="text-sm text-neutral-500 mt-1">Turnaround</p>
                 </div>
               </div>
@@ -494,13 +494,13 @@ export default function Home() {
       </section>
 
       {/* Manifesto */}
-      <section className="py-24 bg-white border-y border-neutral-100">
+      <section className="py-12 lg:py-24 bg-white border-y border-neutral-100">
         <div className="px-[5vw]">
-          <FadeUp className="mb-16">
+          <FadeUp className="mb-10 lg:mb-16">
             <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
               What we believe
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
               We believe...
             </h2>
           </FadeUp>
@@ -511,7 +511,7 @@ export default function Home() {
                   <span className="text-neutral-300 font-mono text-xs font-bold select-none">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <p className="text-neutral-900 text-2xl md:text-3xl font-bold leading-snug mt-4 mb-4 group-hover:text-emerald-600 transition-colors duration-300">
+                  <p className="text-neutral-900 text-xl md:text-2xl lg:text-3xl font-bold leading-snug mt-4 mb-4 group-hover:text-emerald-600 transition-colors duration-300">
                     {belief.headline}
                   </p>
                   <p className="text-neutral-500 text-sm leading-relaxed">{belief.sub}</p>
@@ -523,25 +523,47 @@ export default function Home() {
       </section>
 
       {/* Why Us */}
-      <section id="why" className="py-24 bg-neutral-50">
+      <section id="why" className="py-24 bg-white">
         <div className="px-[5vw]">
-          <FadeUp className="mb-16 max-w-xl">
-            <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
-              Why us
+          {/* Header */}
+          <FadeUp className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div>
+              <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-4">
+                Why us
+              </p>
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 leading-none">
+                What makes us<br className="hidden sm:block" /> different
+              </h2>
+            </div>
+            <p className="text-neutral-400 text-base leading-relaxed max-w-xs lg:text-right">
+              Not just another agency. Here's why founders and CTOs choose to work with us.
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
-              What makes us different
-            </h2>
           </FadeUp>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+          {/* Items — editorial horizontal list */}
+          <div className="border-t border-neutral-100">
             {whyUs.map((item, i) => (
-              <FadeUp key={item.title} delay={i * 120}>
-                <div className="bg-white rounded-2xl p-8 h-full border border-neutral-200 hover:border-emerald-300 hover:shadow-lg hover:shadow-emerald-50 transition-all group">
-                  <div className="text-emerald-600 group-hover:text-emerald-700 transition-colors mb-6">
+              <FadeUp key={item.title} delay={i * 100}>
+                <div className="group border-b border-neutral-100 py-10 lg:py-14 grid grid-cols-1 lg:grid-cols-[96px_1fr_56px] gap-y-5 gap-x-10 xl:gap-x-16 items-center -mx-[5vw] px-[5vw] hover:bg-emerald-50/40 transition-colors duration-300">
+                  {/* Number */}
+                  <span className="font-mono text-5xl lg:text-6xl font-black text-neutral-100 group-hover:text-emerald-100 transition-colors duration-300 select-none leading-none">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+
+                  {/* Text */}
+                  <div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-3 leading-tight group-hover:text-emerald-700 transition-colors duration-300">
+                      {item.title}
+                    </h3>
+                    <p className="text-neutral-500 text-base leading-relaxed max-w-2xl">
+                      {item.desc}
+                    </p>
+                  </div>
+
+                  {/* Icon */}
+                  <div className="text-neutral-200 group-hover:text-emerald-400 transition-colors duration-300 flex-shrink-0 hidden lg:block">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-semibold text-neutral-900 mb-3 leading-snug">{item.title}</h3>
-                  <p className="text-neutral-500 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </FadeUp>
             ))}
@@ -556,7 +578,7 @@ export default function Home() {
             <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">
               How we work
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
               Our process
             </h2>
           </FadeUp>
@@ -584,7 +606,7 @@ export default function Home() {
             <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
               Client stories
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
               What clients say
             </h2>
           </FadeUp>
@@ -629,10 +651,10 @@ export default function Home() {
                   <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-4">
                     Let&apos;s build together
                   </p>
-                  <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white mb-5">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-5">
                     Ready to build something great?
                   </h2>
-                  <p className="text-neutral-400 text-lg leading-relaxed">
+                  <p className="text-neutral-400 text-base md:text-lg leading-relaxed">
                     Tell us about your project. We&apos;ll get back to you within 24 hours with
                     honest thoughts and a clear path forward.
                   </p>
@@ -640,7 +662,7 @@ export default function Home() {
 
                 <div className="flex flex-col items-center lg:items-end gap-4 flex-shrink-0">
                   <a
-                    href="mailto:hello@beondinnovations.com"
+                    href="mailto:beondinnovations@gmail.com"
                     className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 text-white font-semibold text-base hover:bg-emerald-400 transition-all duration-200 hover:shadow-2xl hover:shadow-emerald-500/30 hover:-translate-y-0.5"
                   >
                     Start a conversation
@@ -649,7 +671,7 @@ export default function Home() {
                     </svg>
                   </a>
                   <p className="text-neutral-600 text-xs">
-                    hello@beondinnovations.com · Usually replies within hours
+                    beondinnovations@gmail.com · Usually replies within hours
                   </p>
                 </div>
               </div>

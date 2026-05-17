@@ -15,6 +15,12 @@ html {
 }
 
 
+/* splash line */
+@keyframes expandLine {
+  from { transform: scaleX(0); opacity: 0; }
+  to   { transform: scaleX(1); opacity: 1; }
+}
+
 /* marquee */
 @keyframes marquee-left {
   from { transform: translateX(0); }
