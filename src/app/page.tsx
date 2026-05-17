@@ -670,7 +670,7 @@ export default function Home() {
                       <path d="M3 8h10M9 4l4 4-4 4" />
                     </svg>
                   </a>
-                  <p className="text-neutral-600 text-xs">
+                  <p className="text-neutral-600 text-xs text-center lg:text-right mt-2">
                     beondinnovations@gmail.com · Usually replies within hours
                   </p>
                 </div>

@@ -115,6 +115,16 @@ export default function Footer() {
 
         {/* Contact */}
         <div className="flex flex-col items-center gap-2 w-full">
+          <div className="flex items-start gap-2 text-xs text-neutral-500 text-center mb-1">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className="text-emerald-500 shrink-0 mt-0.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" />
+              <circle cx="12" cy="9" r="2.5" />
+            </svg>
+            <address className="not-italic leading-relaxed">
+              PB102, Carmel College of Engineering &amp; Technology,<br />
+              Punnapra, Alappuzha, Kerala – 688004, India
+            </address>
+          </div>
           <a
             href="mailto:beondinnovations@gmail.com"
             className="flex items-center gap-2 text-xs text-neutral-500"
