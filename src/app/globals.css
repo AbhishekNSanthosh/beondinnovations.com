@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-outfit);
+}
+
+html {
+  font-family: var(--font-outfit), system-ui, sans-serif;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: #059669;
+  color: #fff;
+}
+
+
+/* marquee */
+@keyframes marquee-left {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+
+.marquee-track-left {
+  animation: marquee-left 30s linear infinite;
+}
+.marquee-track-right {
+  animation: marquee-right 30s linear infinite;
+}
+.marquee-track-left:hover,
+.marquee-track-right:hover {
+  animation-play-state: paused;
+}
