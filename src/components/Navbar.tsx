@@ -22,11 +22,25 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    if (open) {
+      history.pushState({ drawerOpen: true }, "");
+      const onPopState = (e: PopStateEvent) => {
+        if (e.state?.drawerOpen) return;
+        setOpen(false);
+      };
+      window.addEventListener("popstate", onPopState);
+      return () => window.removeEventListener("popstate", onPopState);
+    }
+  }, [open]);
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 border-b transition-all duration-300 flex flex-col ${
+        open ? "bg-white" : ""
+      } ${
         scrolled
-          ? "bg-white/95 backdrop-blur-sm border-neutral-200 shadow-sm"
+          ? "bg-white/95 backdrop-blur-sm border-neutral-100"
           : "bg-transparent border-transparent"
       }`}
     >
@@ -73,8 +87,8 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`md:hidden bg-white border-t border-neutral-100 px-[5vw] flex flex-col gap-4 overflow-hidden transition-all duration-300 ease-in-out ${
-          open ? "max-h-80 py-4 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+        className={`md:hidden bg-white border-t border-neutral-100 px-[5vw] flex flex-col gap-3 overflow-hidden transition-all duration-300 ease-in-out ${
+          open ? "py-4 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
         }`}
       >
         {links.map((l) => (
@@ -94,6 +108,17 @@ export default function Navbar() {
         >
           Get in touch
         </a>
+
+        <div className="mt-2 pt-4 pb-2 border-t border-neutral-100 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <p className="text-xs text-neutral-400">
+            &copy; {new Date().getFullYear()} Beond Innovations LLP. All rights reserved.
+          </p>
+          <div className="flex items-center gap-1.5 text-xs text-neutral-400">
+            <span>Crafted with</span>
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600" />
+            <span>in Kerala, India</span>
+          </div>
+        </div>
       </div>
     </header>
   );

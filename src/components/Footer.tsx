@@ -37,7 +37,7 @@ const socialLinks = [
   },
   {
     label: "Email",
-    href: "mailto:hello@beondinnovations.com",
+    href: "mailto:beondinnovations@gmail.com",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75">
         <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -150,10 +150,19 @@ export default function Footer() {
                 <p>Kerala – 688004, India</p>
               </address>
               <a
-                href="mailto:hello@beondinnovations.com"
+                href="mailto:beondinnovations@gmail.com"
                 className="inline-flex items-center gap-1 mt-4 text-xs text-emerald-500 hover:text-emerald-400 transition-colors"
               >
-                hello@beondinnovations.com
+                beondinnovations@gmail.com
+                <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <path d="M1.5 8.5l7-7M8.5 1.5H3M8.5 1.5v5.5" />
+                </svg>
+              </a>
+              <a
+                href="tel:+917907247909"
+                className="inline-flex items-center gap-1 mt-2 text-xs text-emerald-500 hover:text-emerald-400 transition-colors"
+              >
+                +91 7907247909
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M1.5 8.5l7-7M8.5 1.5H3M8.5 1.5v5.5" />
                 </svg>

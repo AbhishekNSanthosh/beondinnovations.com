@@ -123,13 +123,23 @@ const stats = [
   { value: "0", label: "Middlemen between us" },
 ];
 
-const techRow1 = [
-  "Next.js", "React", "TypeScript", "Tailwind CSS", "Node.js",
-  "PostgreSQL", "Prisma", "tRPC", "Supabase", "Vercel",
-];
-const techRow2 = [
-  "React Native", "Expo", "Python", "FastAPI", "Redis",
-  "Docker", "AWS", "Stripe", "Firebase", "GraphQL",
+const beliefs = [
+  {
+    headline: "Good software is invisible.",
+    sub: "When a product just works, users don't think about the code underneath. That's the goal — craftsmanship that disappears into the experience.",
+  },
+  {
+    headline: "Speed without shortcuts.",
+    sub: "Shipping fast and cutting corners are not the same thing. We move quickly because we've solved these problems before — not because we're skipping steps.",
+  },
+  {
+    headline: "Simplicity is the hardest thing to build.",
+    sub: "Complex systems are easy to justify. Simple ones take real discipline. We fight for clarity in every decision — architecture, UI, communication.",
+  },
+  {
+    headline: "You should always know what you're paying for.",
+    sub: "No black boxes. No jargon shields. Every decision we make, we can explain in plain language — and we do.",
+  },
 ];
 
 const whyUs = [
@@ -220,32 +230,89 @@ export default function Home() {
       <HeroSection />
 
       {/* Services */}
-      <section id="services" className="py-24 bg-neutral-50">
+      <section id="services" className="py-24 bg-emerald-50/40 border-y border-emerald-100/60">
         <div className="px-[5vw]">
-          <FadeUp className="mb-16">
-            <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
-              What we do
+          {/* Header */}
+          <FadeUp className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div>
+              <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-4">
+                What we do
+              </p>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+                Services
+              </h2>
+            </div>
+            <p className="text-neutral-500 text-base leading-relaxed max-w-sm lg:text-right">
+              End-to-end software development — one team, not five vendors.
             </p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
-              Services
-            </h2>
           </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
-              <FadeUp
-                key={s.title}
-                delay={i * 80}
-                className="bg-white rounded-xl p-8 border border-neutral-200 hover:border-emerald-300 transition-colors group"
-              >
-                <div className="text-neutral-400 group-hover:text-emerald-600 transition-colors mb-5">
-                  {s.icon}
-                </div>
-                <h3 className="font-semibold text-lg text-neutral-900 mb-2">{s.title}</h3>
-                <p className="text-neutral-500 text-sm leading-relaxed">{s.desc}</p>
-              </FadeUp>
-            ))}
+          {/* Grid */}
+          <div className="border border-emerald-100 rounded-2xl overflow-hidden  shadow-emerald-100/50">
+            {/* Row 1 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-emerald-100/70">
+              {services.slice(0, 3).map((s, i) => (
+                <FadeUp key={s.title} delay={i * 70}>
+                  <div className="group relative bg-white p-8 lg:p-10 hover:bg-emerald-50/60 transition-colors h-full flex flex-col">
+                    <span className="absolute top-7 right-8 font-mono text-xs font-bold text-emerald-200 group-hover:text-emerald-400 transition-colors select-none">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100 group-hover:bg-emerald-100 group-hover:border-emerald-200 flex items-center justify-center text-emerald-500 group-hover:text-emerald-700 transition-all mb-6 flex-shrink-0">
+                      {s.icon}
+                    </div>
+                    <h3 className="font-semibold text-lg text-neutral-900 mb-2 leading-snug">{s.title}</h3>
+                    <p className="text-neutral-500 text-sm leading-relaxed flex-1">{s.desc}</p>
+                    <div className="flex items-center gap-1.5 mt-6 text-xs font-semibold text-emerald-300 group-hover:text-emerald-600 transition-colors">
+                      Learn more
+                      <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2">
+                        <path d="M2 7h10M8 3l4 4-4 4" />
+                      </svg>
+                    </div>
+                  </div>
+                </FadeUp>
+              ))}
+            </div>
+
+            {/* Divider */}
+            <div className="border-t border-emerald-100/70" />
+
+            {/* Row 2 */}
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-emerald-100/70">
+              {services.slice(3).map((s, i) => (
+                <FadeUp key={s.title} delay={(i + 3) * 70}>
+                  <div className="group relative bg-white p-8 lg:p-10 hover:bg-emerald-50/60 transition-colors h-full flex flex-col">
+                    <span className="absolute top-7 right-8 font-mono text-xs font-bold text-emerald-200 group-hover:text-emerald-400 transition-colors select-none">
+                      {String(i + 4).padStart(2, "0")}
+                    </span>
+                    <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100 group-hover:bg-emerald-100 group-hover:border-emerald-200 flex items-center justify-center text-emerald-500 group-hover:text-emerald-700 transition-all mb-6 flex-shrink-0">
+                      {s.icon}
+                    </div>
+                    <h3 className="font-semibold text-lg text-neutral-900 mb-2 leading-snug">{s.title}</h3>
+                    <p className="text-neutral-500 text-sm leading-relaxed flex-1">{s.desc}</p>
+                    <div className="flex items-center gap-1.5 mt-6 text-xs font-semibold text-emerald-300 group-hover:text-emerald-600 transition-colors">
+                      Learn more
+                      <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2">
+                        <path d="M2 7h10M8 3l4 4-4 4" />
+                      </svg>
+                    </div>
+                  </div>
+                </FadeUp>
+              ))}
+            </div>
           </div>
+
+          {/* Bottom CTA */}
+          <FadeUp delay={200} className="mt-10 flex items-center justify-center">
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600/70 hover:text-emerald-700 transition-colors"
+            >
+              Have something specific in mind? Let&apos;s talk
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M2 7h10M8 3l4 4-4 4" />
+              </svg>
+            </a>
+          </FadeUp>
         </div>
       </section>
 
@@ -324,46 +391,6 @@ export default function Home() {
                 </div>
               </FadeUp>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Tech Stack */}
-      <section className="py-20 overflow-hidden border-y border-neutral-100">
-        <div className="px-[5vw] mb-10">
-          <FadeUp>
-            <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-2">
-              Our stack
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-neutral-900">
-              Built with the best tools
-            </h2>
-          </FadeUp>
-        </div>
-        <div className="space-y-4 select-none">
-          <div className="overflow-hidden">
-            <div className="flex w-max gap-4 marquee-track-left">
-              {[...techRow1, ...techRow1].map((tech, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center px-5 py-2.5 rounded-full bg-neutral-100 text-neutral-700 text-sm font-medium whitespace-nowrap border border-neutral-200"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
-          <div className="overflow-hidden">
-            <div className="flex w-max gap-4 marquee-track-right">
-              {[...techRow2, ...techRow2].map((tech, i) => (
-                <span
-                  key={i}
-                  className="inline-flex items-center px-5 py-2.5 rounded-full bg-emerald-50 text-emerald-700 text-sm font-medium whitespace-nowrap border border-emerald-100"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -462,6 +489,35 @@ export default function Home() {
 
               <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-lg bg-emerald-600 -z-10" />
             </FadeUp>
+          </div>
+        </div>
+      </section>
+
+      {/* Manifesto */}
+      <section className="py-24 bg-white border-y border-neutral-100">
+        <div className="px-[5vw]">
+          <FadeUp className="mb-16">
+            <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
+              What we believe
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+              We believe...
+            </h2>
+          </FadeUp>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-neutral-100 rounded-2xl overflow-hidden border border-neutral-200">
+            {beliefs.map((belief, i) => (
+              <FadeUp key={i} delay={i * 100}>
+                <div className="bg-white p-10 lg:p-12 group h-full hover:bg-emerald-50/40 transition-colors duration-300">
+                  <span className="text-neutral-300 font-mono text-xs font-bold select-none">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <p className="text-neutral-900 text-2xl md:text-3xl font-bold leading-snug mt-4 mb-4 group-hover:text-emerald-600 transition-colors duration-300">
+                    {belief.headline}
+                  </p>
+                  <p className="text-neutral-500 text-sm leading-relaxed">{belief.sub}</p>
+                </div>
+              </FadeUp>
+            ))}
           </div>
         </div>
       </section>
