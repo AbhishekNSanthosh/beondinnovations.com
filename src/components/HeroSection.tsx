@@ -55,13 +55,13 @@ export default function HeroSection() {
       <div className="absolute top-1/3 right-1/3 -z-10 w-[700px] h-[700px] rounded-full bg-emerald-400/10 blur-[140px]" />
       <div className="absolute -top-32 -left-32 -z-10 w-[500px] h-[500px] rounded-full bg-emerald-200/20 blur-[100px]" />
 
-      <div className="w-full px-5 sm:px-8 lg:px-[5vw] py-10 lg:py-0 lg:pt-10 lg:pb-24">
+      <div className="w-full px-6 sm:px-8 lg:px-[5vw] py-16 lg:py-0 lg:pt-10 lg:pb-24">
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-12 xl:gap-20">
 
           {/* ── Copy ── */}
-          <div className="flex-1 lg:max-w-2xl">
+          <div className="flex-1 lg:max-w-2xl pt-6 lg:pt-0">
 
-            <div className="hero-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-5 lg:mb-8">
+            <div className="hero-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6 lg:mb-8">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
@@ -69,67 +69,93 @@ export default function HeroSection() {
               Available for new projects
             </div>
 
-            <h1 className="hero-heading text-[2.15rem] leading-[1.1] sm:text-5xl lg:text-[4.25rem] lg:leading-[1.08] font-bold tracking-tight text-neutral-900 mb-4 lg:mb-6">
+            <h1 className="hero-heading text-[2.6rem] leading-[1.08] sm:text-5xl lg:text-[4.25rem] lg:leading-[1.08] font-bold tracking-tight text-neutral-900 mb-4 lg:mb-6">
               We build software{" "}
               <span className="text-emerald-600">that moves</span>{" "}
               your business forward.
             </h1>
 
-            <p className="hero-sub text-[0.95rem] sm:text-lg lg:text-xl text-neutral-500 leading-relaxed mb-7 lg:mb-10 max-w-xl">
+            <p className="hero-sub text-[0.95rem] sm:text-lg lg:text-xl text-neutral-500 leading-relaxed mb-7 lg:mb-10 max-w-lg">
               Beond Innovations partners with startups and businesses to design
               and build high-quality digital products — fast, clean, and built
               to scale.
             </p>
 
-            <div className="flex flex-wrap gap-3">
+            <div className="flex items-center gap-3 lg:justify-start">
               <a
                 href="#contact"
-                className="hero-btn inline-flex items-center gap-2 px-6 py-3 lg:px-7 lg:py-3.5 rounded-xl bg-neutral-900 text-white text-sm font-semibold hover:bg-emerald-600 transition-all duration-200 hover:-translate-y-0.5"
+                className="hero-btn flex-1 lg:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-neutral-900 text-white text-sm font-semibold hover:bg-emerald-600 transition-all duration-200 hover:-translate-y-0.5"
               >
                 Start a project
-                <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M3 8h10M9 4l4 4-4 4" />
                 </svg>
               </a>
               <a
                 href="#services"
-                className="hero-btn inline-flex items-center gap-2 px-6 py-3 lg:px-7 lg:py-3.5 rounded-xl border border-neutral-200 text-neutral-700 text-sm font-medium hover:border-neutral-400 hover:bg-neutral-50 transition-all duration-200"
+                className="hero-btn flex-1 lg:flex-none inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-neutral-200 text-neutral-700 text-sm font-medium hover:border-neutral-400 hover:bg-neutral-50 transition-all duration-200"
               >
-                See our services
+                Our services
               </a>
             </div>
 
-            {/* Mobile-only stat strip */}
-            <div className="flex gap-4 mt-8 lg:hidden">
-              <div className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-neutral-900 leading-none">8 wks avg.</p>
-                  <p className="text-[10px] text-neutral-400 mt-0.5">Idea to launch</p>
+            {/* Mobile-only dashboard card */}
+            <div className="mt-7 lg:hidden rounded-2xl bg-neutral-950 border border-neutral-800 p-4 overflow-hidden">
+              {/* Top bar */}
+              <div className="flex items-center gap-1.5 mb-4">
+                <span className="w-2.5 h-2.5 rounded-full bg-neutral-700" />
+                <span className="w-2.5 h-2.5 rounded-full bg-neutral-700" />
+                <span className="w-2.5 h-2.5 rounded-full bg-neutral-700" />
+                <div className="ml-2 flex-1 h-5 rounded-md bg-neutral-800 flex items-center px-2">
+                  <span className="text-[9px] text-neutral-500 font-mono">beondinnovations.com</span>
                 </div>
               </div>
-              <div className="w-px bg-neutral-200" />
-              <div className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-lg bg-emerald-100 flex items-center justify-center text-emerald-600 flex-shrink-0">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="M9 12l2 2 4-4" />
-                  </svg>
+              {/* Content rows */}
+              <div className="space-y-2.5">
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2">
+                      <rect x="5" y="2" width="14" height="20" rx="2" /><path d="M12 18h.01" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <div className="h-2 w-24 bg-neutral-700 rounded-full mb-1.5" />
+                    <div className="h-1.5 w-16 bg-neutral-800 rounded-full" />
+                  </div>
+                  <span className="text-[10px] font-semibold text-emerald-400 bg-emerald-400/10 px-2 py-0.5 rounded-full">Live</span>
                 </div>
-                <div>
-                  <p className="text-xs font-bold text-neutral-900 leading-none">100% owned</p>
-                  <p className="text-[10px] text-neutral-400 mt-0.5">Every line of code</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+                    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2">
+                      <rect x="2" y="3" width="20" height="14" rx="2" /><path d="M8 21h8M12 17v4" />
+                    </svg>
+                  </div>
+                  <div className="flex-1">
+                    <div className="h-2 w-20 bg-neutral-700 rounded-full mb-1.5" />
+                    <div className="h-1.5 w-28 bg-neutral-800 rounded-full" />
+                  </div>
+                  <span className="text-[10px] font-semibold text-blue-400 bg-blue-400/10 px-2 py-0.5 rounded-full">v2.4</span>
                 </div>
+                {/* Bar chart row */}
+                <div className="mt-1 pt-3 border-t border-neutral-800 flex items-end gap-1 h-10">
+                  {[40, 65, 50, 80, 60, 90, 75].map((h, i) => (
+                    <div
+                      key={i}
+                      className="flex-1 rounded-sm"
+                      style={{
+                        height: `${h}%`,
+                        background: i === 5 ? "#10b981" : "#262626",
+                      }}
+                    />
+                  ))}
+                </div>
+                <p className="text-[10px] text-neutral-600 font-mono">Weekly deployments · 7 this month</p>
               </div>
             </div>
           </div>
 
-          {/* ── Bento grid ── */}
-          <div className="hero-terminal w-full lg:flex-1 relative lg:flex lg:items-center lg:justify-center lg:min-h-[500px]">
+          {/* ── Bento grid — desktop only ── */}
+          <div className="hero-terminal hidden lg:flex w-full lg:flex-1 relative lg:items-center lg:justify-center lg:min-h-[500px]">
             <div className="absolute inset-0 bg-emerald-400/8 blur-3xl rounded-3xl scale-95 hidden lg:block" />
 
             {/* Floating chips — desktop only */}

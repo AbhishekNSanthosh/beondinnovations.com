@@ -144,9 +144,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Beond Innovations LLP. All rights reserved.
           </p>
           <div className="flex items-center gap-1.5 text-[10px] text-neutral-600">
-            <span>Crafted with</span>
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-700" />
-            <span>in Kerala, India</span>
+            <span>Innovation, Beyond Limits.</span>
           </div>
         </div>
       </div>
@@ -254,9 +252,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Beond Innovations LLP. All rights reserved.
           </p>
           <div className="flex items-center gap-1.5 text-xs text-neutral-600">
-            <span>Crafted with</span>
-            <span className="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600" />
-            <span>in Kerala, India</span>
+            <span>Innovation, Beyond Limits.</span>
           </div>
         </div>
       </div>
