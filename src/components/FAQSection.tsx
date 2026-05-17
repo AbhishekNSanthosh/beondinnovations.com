@@ -22,15 +22,32 @@ const faqs = [
   },
   {
     q: "How do we get started?",
-    a: "Send us a brief overview of what you're building at hello@beondinnovations.com. We'll schedule a 30-minute call, and follow up with honest thoughts and a proposed scope — no sales fluff.",
+    a: "Send us a brief overview of what you're building at beondinnovations@gmail.com. We'll schedule a 30-minute call, and follow up with honest thoughts and a proposed scope — no sales fluff.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.q,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.a,
+    },
+  })),
+};
 
 export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
     <section id="faq" className="py-12 lg:py-24 bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="px-[5vw]">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 items-start">
           <FadeUp className="lg:sticky lg:top-28 lg:w-72 flex-shrink-0">

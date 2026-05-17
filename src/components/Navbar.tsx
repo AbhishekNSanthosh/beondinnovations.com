@@ -50,7 +50,7 @@ export default function Navbar() {
             : "bg-transparent border-transparent"
         }`}
       >
-        <nav className="px-5 h-16 flex items-center justify-between">
+        <nav className="px-5 md:px-[5vw] h-16 flex items-center justify-between">
           <Link href="/" className="font-bold text-xl tracking-tight text-neutral-900">
             beond<span className="text-emerald-600">.</span>
           </Link>
