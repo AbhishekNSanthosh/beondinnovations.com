@@ -69,7 +69,7 @@ export default function HeroSection() {
               Available for new projects
             </div>
 
-            <h1 className="hero-heading text-[2.6rem] leading-[1.08] sm:text-5xl lg:text-[4.25rem] lg:leading-[1.08] font-bold tracking-tight text-neutral-900 mb-4 lg:mb-6">
+            <h1 className="hero-heading text-[1.9rem] leading-[1.1] sm:text-5xl lg:text-[4.25rem] lg:leading-[1.08] font-bold tracking-tight text-neutral-900 mb-4 lg:mb-6">
               We build software{" "}
               <span className="text-emerald-600">that moves</span>{" "}
               your business forward.

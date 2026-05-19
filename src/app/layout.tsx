@@ -14,30 +14,90 @@ const siteUrl = "https://beondinnovations.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Beond Innovations — Software Development Studio in Kerala, India",
+    default: "Beond Innovations — Website Design & Software Development Studio | Kerala, India",
     template: "%s | Beond Innovations",
   },
   description:
-    "Beond Innovations is a software development studio based in Kerala, India. We build web apps, mobile apps, APIs, and MVPs for startups and businesses globally — fast, clean, and production-ready.",
+    "Beond Innovations is a website design and software development studio based in Kerala, India. We design and build web apps, mobile apps, APIs, and MVPs for startups and businesses globally — fast, clean, and production-ready.",
   keywords: [
+    // Brand keywords — exact-match and variations
+    "beond",
+    "beond innovations",
+    "beond innovations website",
+    "beond innovations company",
+    "beond innovations studio",
+    "beond software",
+    "beond software development",
+    "beond web design",
+    "beond app development",
+    "beondinnovations",
+    "beondinnovations.com",
+    // Website design keywords
+    "website design company India",
+    "website design company Kerala",
+    "website design agency India",
+    "website design agency Kerala",
+    "website design and development India",
+    "professional website design India",
+    "website design services India",
+    "website design services Kerala",
+    "website development company India",
+    "website development company Kerala",
+    "website development agency India",
+    "website development agency Kerala",
+    "web design company India",
+    "web design company Kerala",
+    "web design agency India",
+    "web design agency Kerala",
+    "web development company India",
+    "web development agency India",
+    "web development services Kerala",
+    // App development
+    "app development company India",
+    "app development company Kerala",
+    "mobile app development India",
+    "mobile app development Kerala",
+    "iOS app development India",
+    "Android app development India",
+    "cross-platform app development India",
+    "React Native app development India",
+    // Software development
     "software development company India",
     "software development studio Kerala",
-    "custom software development",
-    "web app development",
-    "mobile app development",
-    "MVP development services",
-    "React Next.js development",
-    "React Native app development",
-    "API backend development",
-    "UI UX design services",
-    "tech consulting India",
-    "startup software development",
-    "full stack development Kerala",
-    "SaaS development",
-    "software agency India",
-    "Beond Innovations",
+    "software development agency India",
+    "custom software development India",
+    "software company Kerala",
     "software company Alappuzha",
+    "IT company Kerala",
     "Kerala IT company",
+    "software studio India",
+    "software agency India",
+    // Specific services
+    "web app development India",
+    "MVP development India",
+    "MVP development services",
+    "API backend development India",
+    "UI UX design India",
+    "UI UX design Kerala",
+    "UI UX design agency India",
+    "tech consulting India",
+    "technology consulting Kerala",
+    "SaaS development India",
+    "startup software development India",
+    "full stack development India",
+    "full stack development Kerala",
+    // Technologies
+    "Next.js development agency India",
+    "React development company India",
+    "React Next.js development",
+    "Node.js development India",
+    // Intent-based
+    "hire software developers India",
+    "hire web developers Kerala",
+    "outsource software development India",
+    "software development for startups India",
+    "best software company Kerala",
+    "top web development company Kerala",
   ],
   authors: [{ name: "Beond Innovations", url: siteUrl }],
   creator: "Beond Innovations",
@@ -52,16 +112,16 @@ export const metadata: Metadata = {
     type: "website",
     url: siteUrl,
     siteName: "Beond Innovations",
-    title: "Beond Innovations — Software Development Studio in Kerala, India",
+    title: "Beond Innovations — Website Design & Software Development Studio | Kerala, India",
     description:
-      "We build web apps, mobile apps, APIs, and MVPs for startups and businesses globally — fast, clean, and production-ready. Based in Kerala, India.",
+      "Beond Innovations designs and builds web apps, mobile apps, APIs, and MVPs for startups and businesses globally — fast, clean, and production-ready. Based in Kerala, India.",
     locale: "en_IN",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Beond Innovations — Software Development Studio in Kerala, India",
+        alt: "Beond Innovations — Website Design & Software Development Studio in Kerala, India",
       },
     ],
   },
@@ -69,9 +129,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@beondinnovations",
     creator: "@beondinnovations",
-    title: "Beond Innovations — Software Development Studio",
+    title: "Beond Innovations — Website Design & Software Development",
     description:
-      "We build web apps, mobile apps, APIs, and MVPs — fast, clean, and production-ready. Based in Kerala, India. Working globally.",
+      "We design and build web apps, mobile apps, APIs, and MVPs — fast, clean, and production-ready. Based in Kerala, India. Working globally.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -103,6 +163,7 @@ const organizationSchema = {
   "@type": "Organization",
   "@id": `${siteUrl}/#organization`,
   name: "Beond Innovations",
+  alternateName: ["Beond", "beond", "Beond Studio", "Beond Software", "beondinnovations"],
   legalName: "Beond Innovations LLP",
   url: siteUrl,
   logo: {
@@ -129,32 +190,44 @@ const organizationSchema = {
   },
   sameAs: socialProfiles,
   description:
-    "Beond Innovations is a software development studio building web apps, mobile apps, APIs, and MVPs for startups and businesses globally.",
+    "Beond Innovations is a website design and software development studio building web apps, mobile apps, APIs, and MVPs for startups and businesses globally. Based in Kerala, India.",
   knowsAbout: [
+    "Website Design",
     "Web Development",
     "Mobile App Development",
     "API Development",
     "MVP Development",
     "UI/UX Design",
     "Tech Consulting",
+    "Software Development",
     "React",
     "Next.js",
     "React Native",
     "Node.js",
     "PostgreSQL",
+    "TypeScript",
   ],
 };
 
 const localBusinessSchema = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
+  "@type": ["LocalBusiness", "ProfessionalService"],
   "@id": `${siteUrl}/#localbusiness`,
   name: "Beond Innovations",
+  alternateName: ["Beond", "beond", "Beond Studio"],
   image: `${siteUrl}/og-image.png`,
   url: siteUrl,
   telephone: "+917907247909",
   email: "beondinnovations@gmail.com",
   priceRange: "$$",
+  currenciesAccepted: "INR, USD",
+  paymentAccepted: "Bank Transfer, UPI",
+  areaServed: [
+    { "@type": "Country", name: "India" },
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "AdministrativeArea", name: "Kerala" },
+  ],
   address: {
     "@type": "PostalAddress",
     streetAddress: "PB102, Carmel College of Engineering & Technology, Punnapra",
@@ -176,7 +249,19 @@ const localBusinessSchema = {
   },
   sameAs: socialProfiles,
   description:
-    "Software development studio in Kerala, India. Building web apps, mobile apps, APIs, and MVPs for startups and businesses worldwide.",
+    "Beond Innovations is a website design and software development studio in Kerala, India. Building web apps, mobile apps, APIs, and MVPs for startups and businesses worldwide.",
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Website Design & Software Development Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Website Design", serviceType: "Website Design" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Web Development", serviceType: "Web Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Mobile App Development", serviceType: "Mobile App Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "MVP Development", serviceType: "MVP Development" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "UI/UX Design", serviceType: "UI/UX Design" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Tech Consulting", serviceType: "Technology Consulting" } },
+    ],
+  },
 };
 
 const websiteSchema = {
@@ -185,8 +270,9 @@ const websiteSchema = {
   "@id": `${siteUrl}/#website`,
   url: siteUrl,
   name: "Beond Innovations",
+  alternateName: ["Beond", "beond innovations", "Beond Studio"],
   description:
-    "Software development studio in Kerala, India. Building web apps, mobile apps, APIs, and MVPs for startups and businesses globally.",
+    "Website design and software development studio in Kerala, India. Building web apps, mobile apps, APIs, and MVPs for startups and businesses globally.",
   publisher: {
     "@id": `${siteUrl}/#organization`,
   },
@@ -203,11 +289,24 @@ const websiteSchema = {
 const servicesSchema = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  name: "Software Development Services by Beond Innovations",
+  name: "Website Design & Software Development Services by Beond Innovations",
   itemListElement: [
     {
       "@type": "ListItem",
       position: 1,
+      item: {
+        "@type": "Service",
+        name: "Website Design",
+        description:
+          "Professional website design services — clean, modern, and conversion-focused. Every site is custom designed for your brand and audience.",
+        provider: { "@id": `${siteUrl}/#organization` },
+        serviceType: "Website Design",
+        areaServed: "Worldwide",
+      },
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
       item: {
         "@type": "Service",
         name: "Web Development",
@@ -220,7 +319,7 @@ const servicesSchema = {
     },
     {
       "@type": "ListItem",
-      position: 2,
+      position: 3,
       item: {
         "@type": "Service",
         name: "Mobile App Development",
@@ -233,7 +332,7 @@ const servicesSchema = {
     },
     {
       "@type": "ListItem",
-      position: 3,
+      position: 4,
       item: {
         "@type": "Service",
         name: "API & Backend Development",
@@ -246,7 +345,7 @@ const servicesSchema = {
     },
     {
       "@type": "ListItem",
-      position: 4,
+      position: 5,
       item: {
         "@type": "Service",
         name: "MVP Development",
@@ -259,7 +358,7 @@ const servicesSchema = {
     },
     {
       "@type": "ListItem",
-      position: 5,
+      position: 6,
       item: {
         "@type": "Service",
         name: "UI/UX Design",
@@ -272,7 +371,7 @@ const servicesSchema = {
     },
     {
       "@type": "ListItem",
-      position: 6,
+      position: 7,
       item: {
         "@type": "Service",
         name: "Tech Consulting",
@@ -292,6 +391,30 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
+      name: "What is Beond Innovations?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Beond Innovations (also known as 'Beond') is a website design and software development studio based in Kerala, India. We build web apps, mobile apps, APIs, and MVPs for startups and businesses globally.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What services does Beond Innovations offer?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Beond Innovations offers website design, web development, mobile app development (iOS & Android), API and backend development, MVP development, UI/UX design, and tech consulting. We work with startups and businesses globally.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Where is Beond Innovations located?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Beond Innovations is based in Alappuzha, Kerala, India. We work with clients globally across India, USA, UK, and other countries.",
+      },
+    },
+    {
+      "@type": "Question",
       name: "How long does a typical project take?",
       acceptedAnswer: {
         "@type": "Answer",
@@ -308,7 +431,7 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "What does working with you look like day to day?",
+      name: "What does working with Beond Innovations look like day to day?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "You'll have direct access to the engineers doing the work — no middlemen. We do weekly syncs, share progress in a shared Slack or Notion space, and you can review the code at any time. Decisions get made fast.",
@@ -316,15 +439,15 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "Do you work with early-stage startups or only established businesses?",
+      name: "Does Beond Innovations work with early-stage startups?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Both. We've helped founders take ideas from whiteboard to launched product, and we've helped established teams modernize legacy systems. The common thread: clients who want quality work done with clear communication.",
+        text: "Yes, both startups and established businesses. We've helped founders take ideas from whiteboard to launched product, and we've helped established teams modernize legacy systems. The common thread: clients who want quality work done with clear communication.",
       },
     },
     {
       "@type": "Question",
-      name: "How do we get started?",
+      name: "How do we get started with Beond Innovations?",
       acceptedAnswer: {
         "@type": "Answer",
         text: "Send us a brief overview of what you're building at beondinnovations@gmail.com. We'll schedule a 30-minute call, and follow up with honest thoughts and a proposed scope — no sales fluff.",

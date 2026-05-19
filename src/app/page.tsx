@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import FadeUp from "@/components/FadeUp";
 import HeroSection from "@/components/HeroSection";
 import FAQSection from "@/components/FAQSection";
+import TeamSection from "@/components/TeamSection";
 
 const services = [
   {
@@ -67,50 +68,72 @@ const services = [
 
 const projects = [
   {
-    name: "LogStack",
-    category: "SaaS · Web App",
-    desc: "A developer-first log monitoring and alerting platform built for high-throughput distributed systems. Real-time dashboards, smart alerting, and team collaboration built in.",
-    tags: ["Next.js", "Node.js", "PostgreSQL", "Redis"],
-    gradientFrom: "from-emerald-500",
-    gradientTo: "to-teal-600",
-    tagBg: "bg-emerald-900/40 text-emerald-200",
-    stat: "Shipped in 6 weeks",
-    statIcon: (
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-  },
-  {
-    name: "Kinnect",
-    category: "Mobile · Social",
-    desc: "A community-building app for local organizations — real-time events, in-app chat, and member management across iOS and Android with a single codebase.",
-    tags: ["React Native", "Expo", "Supabase", "Stripe"],
-    gradientFrom: "from-blue-500",
-    gradientTo: "to-indigo-600",
-    tagBg: "bg-blue-900/40 text-blue-200",
-    stat: "500+ active users",
-    statIcon: (
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-        <circle cx="9" cy="7" r="4" />
-        <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
-      </svg>
-    ),
-  },
-  {
-    name: "Fincraft",
-    category: "Fintech · Dashboard",
-    desc: "A financial operations dashboard with automated reconciliation, multi-currency ledger, and role-based access control — rebuilt from a messy legacy codebase.",
-    tags: ["React", "FastAPI", "PostgreSQL", "AWS"],
-    gradientFrom: "from-violet-500",
-    gradientTo: "to-purple-600",
-    tagBg: "bg-violet-900/40 text-violet-200",
-    stat: "Legacy modernized",
+    name: "NSS Kavalam",
+    url: "nsshsskavalam.in",
+    category: "Education · Web App",
+    desc: "The official digital presence for NSS Higher Secondary School Kavalam — built to connect students, parents, and staff with school news, events, and academic updates. Designed with a focus on clarity and mobile accessibility.",
+    tags: ["Next.js", "Tailwind CSS", "TypeScript"],
+    image: null,
+    logo: "/projects/nss.png",
+    gradient: "from-orange-950 via-orange-900 to-amber-950",
+    accent: "#ea580c",
+    letter: "N",
+    stat: "Live in production",
     statIcon: (
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
         <path d="M9 12l2 2 4-4" />
+      </svg>
+    ),
+  },
+  {
+    name: "GrabUrPass",
+    url: "graburpass.com",
+    category: "Events · Mobile + Web",
+    desc: "A seamless event pass management platform — attendees grab and store digital passes, organizers manage check-ins in real time. Built for speed, scale, and zero paper.",
+    tags: ["Next.js", "React Native", "Supabase"],
+    image: null,
+    logo: "/projects/graburpass_brandLogo.png",
+    gradient: "from-red-950 via-red-900 to-rose-950",
+    accent: "#ef4444",
+    letter: "G",
+    stat: "In development",
+    statIcon: (
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
+      </svg>
+    ),
+  },
+  // Sam Select — hidden for now
+  // {
+  //   name: "Sam Select",
+  //   url: "samselect.app",
+  //   category: "Photography · SaaS",
+  //   desc: "A private gallery platform for photographers to share event photos with clients who can shortlist, download, and order prints — all without friction. Clean, fast, and purpose-built for event photographers.",
+  //   tags: ["Next.js", "TypeScript", "PostgreSQL"],
+  //   image: null,
+  //   gradient: "from-sky-950 via-sky-900 to-cyan-950",
+  //   accent: "#0ea5e9",
+  //   letter: "S",
+  //   stat: "In development",
+  // },
+  {
+    name: "Edumate",
+    url: "edumate.app",
+    category: "EdTech · Platform",
+    desc: "An all-in-one institute management system — covering admissions, attendance, CRM, and department workflows. Built for schools and coaching centres that need structure without the enterprise price tag.",
+    tags: ["Next.js", "Firebase"],
+    image: null,
+    logo: "/projects/Edumate.svg",
+    gradient: "from-blue-950 via-blue-900 to-indigo-950",
+    accent: "#1F75FE",
+    letter: "E",
+    stat: "In development",
+    statIcon: (
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M12 6v6l4 2" />
       </svg>
     ),
   },
@@ -339,37 +362,78 @@ export default function Home() {
             </a>
           </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map((p, i) => (
               <FadeUp key={p.name} delay={i * 100}>
-                <div className="rounded-2xl overflow-hidden border border-neutral-200 hover:border-neutral-300 hover:shadow-xl hover:shadow-neutral-100 transition-all duration-300 group flex flex-col h-full">
-                  {/* Gradient top */}
-                  <div className={`bg-gradient-to-br ${p.gradientFrom} ${p.gradientTo} p-6 relative overflow-hidden`}>
-                    <div className="absolute inset-0 opacity-20"
-                      style={{
-                        backgroundImage: "radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1px)",
-                        backgroundSize: "20px 20px",
-                      }}
-                    />
-                    <p className="text-white/60 text-xs font-medium uppercase tracking-widest mb-3 relative">
-                      {p.category}
-                    </p>
-                    <h3 className="text-white text-3xl font-black tracking-tight relative">{p.name}</h3>
-                    <div className="flex flex-wrap gap-1.5 mt-4 relative">
-                      {p.tags.map((tag) => (
-                        <span key={tag} className={`text-[10px] font-semibold px-2.5 py-1 rounded-full ${p.tagBg}`}>
-                          {tag}
-                        </span>
-                      ))}
+                <div className="rounded-2xl overflow-hidden border border-neutral-200 hover:border-neutral-300 hover:shadow-xl hover:shadow-neutral-100 transition-all duration-300 group flex flex-col sm:flex-row h-full">
+                  {/* Screenshot / visual side */}
+                  <div className="w-full h-44 sm:h-auto sm:w-2/5 flex-shrink-0 flex flex-col border-b sm:border-b-0 sm:border-r border-neutral-200">
+                    <div className="bg-neutral-50 px-2 py-2 flex items-center gap-1 flex-shrink-0 border-b border-neutral-200">
+                      <span className="w-1.5 h-1.5 rounded-full bg-neutral-300" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-neutral-300" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-neutral-300" />
+                    </div>
+                    <div className="flex-1 overflow-hidden bg-neutral-100">
+                      {p.image ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={p.image}
+                          alt={p.name}
+                          className="w-full h-full object-cover object-top group-hover:scale-[1.04] transition-transform duration-500"
+                        />
+                      ) : (
+                        <div className="w-full h-full bg-white flex items-center justify-center relative overflow-hidden">
+                          {p.logo ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img src={p.logo} alt={p.name} className="relative w-2/3 max-w-[120px] object-contain" />
+                          ) : (
+                            <span className="relative text-5xl font-black opacity-20 select-none" style={{ color: p.accent }}>
+                              {p.letter}
+                            </span>
+                          )}
+                        </div>
+                      )}
                     </div>
                   </div>
 
-                  {/* Content bottom */}
-                  <div className="bg-white p-6 flex flex-col flex-1">
-                    <p className="text-neutral-500 text-sm leading-relaxed flex-1">{p.desc}</p>
-                    <div className="flex items-center gap-1.5 mt-5 pt-5 border-t border-neutral-100 text-xs font-semibold text-neutral-400">
-                      <span className="text-emerald-500">{p.statIcon}</span>
-                      {p.stat}
+                  {/* Info side */}
+                  <div className="w-full sm:w-3/5 bg-white p-5 flex flex-col justify-between">
+                    <div>
+                      <p className="text-emerald-600 text-[10px] font-semibold uppercase tracking-widest mb-1.5">
+                        {p.category}
+                      </p>
+                      <h3 className="font-bold text-base text-neutral-900 mb-2 leading-snug">{p.name}</h3>
+                      <p className="text-neutral-500 text-xs leading-relaxed">{p.desc}</p>
+                    </div>
+
+                    <div className="mt-4 pt-4 border-t border-neutral-100">
+                      <div className="flex flex-wrap gap-1 mb-3">
+                        {p.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center gap-1 text-[10px] font-semibold text-neutral-400">
+                          <span className="text-emerald-500">{p.statIcon}</span>
+                          {p.stat}
+                        </div>
+                        <a
+                          href={`https://${p.url}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
+                        >
+                          View site
+                          <svg width="10" height="10" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2">
+                            <path d="M2 7h10M8 3l4 4-4 4" />
+                          </svg>
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -416,16 +480,16 @@ export default function Home() {
                 We keep teams lean and communication direct. You get senior-level
                 expertise, fast turnarounds, and code you&apos;re proud to ship.
               </p>
-              <div className="flex gap-12">
-                <div>
+              <div className="flex flex-col sm:flex-row gap-6 sm:gap-12 items-center sm:items-start">
+                <div className="text-center sm:text-left">
                   <p className="text-2xl md:text-3xl font-bold text-neutral-900">10+</p>
                   <p className="text-sm text-neutral-500 mt-1">Projects delivered</p>
                 </div>
-                <div>
+                <div className="text-center sm:text-left">
                   <p className="text-2xl md:text-3xl font-bold text-neutral-900">100%</p>
                   <p className="text-sm text-neutral-500 mt-1">Client satisfaction</p>
                 </div>
-                <div>
+                <div className="text-center sm:text-left">
                   <p className="text-2xl md:text-3xl font-bold text-neutral-900">Fast</p>
                   <p className="text-sm text-neutral-500 mt-1">Turnaround</p>
                 </div>
@@ -493,6 +557,8 @@ export default function Home() {
         </div>
       </section>
 
+      <TeamSection />
+
       {/* Manifesto */}
       <section className="py-12 lg:py-24 bg-white border-y border-neutral-100">
         <div className="px-[5vw]">
@@ -523,7 +589,7 @@ export default function Home() {
       </section>
 
       {/* Why Us */}
-      <section id="why" className="py-24 bg-white">
+      <section id="why" className="py-12 lg:py-24 bg-white">
         <div className="px-[5vw]">
           {/* Header */}
           <FadeUp className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
@@ -531,7 +597,7 @@ export default function Home() {
               <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-4">
                 Why us
               </p>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 leading-none">
+              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 leading-none">
                 What makes us<br className="hidden sm:block" /> different
               </h2>
             </div>
@@ -651,7 +717,7 @@ export default function Home() {
                   <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-4">
                     Let&apos;s build together
                   </p>
-                  <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-5">
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-5">
                     Ready to build something great?
                   </h2>
                   <p className="text-neutral-400 text-base md:text-lg leading-relaxed">

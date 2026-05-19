@@ -41,3 +41,14 @@ html {
 .marquee-track-right:hover {
   animation-play-state: paused;
 }
+
+/* Team card tag marquee: scroll one loop → pause 2s → continue → repeat */
+@keyframes marquee-card {
+  0%   { transform: translateX(0);    animation-timing-function: cubic-bezier(0.4, 0, 0.6, 1); }
+  80%  { transform: translateX(-50%); animation-timing-function: linear; }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-card {
+  animation: marquee-card 10s linear infinite;
+}
