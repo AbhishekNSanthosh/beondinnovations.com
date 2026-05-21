@@ -39,7 +39,7 @@ export default function HeroSection() {
   return (
     <section
       ref={root}
-      className="relative min-h-screen flex items-center pt-16 overflow-hidden"
+      className="relative min-h-screen flex items-center pt-16  overflow-hidden"
     >
       {/* Dot grid */}
       <div

@@ -253,25 +253,25 @@ export default function Home() {
       <HeroSection />
 
       {/* Services */}
-      <section id="services" className="py-24 bg-emerald-50/40 border-y border-emerald-100/60">
-        <div className="px-[5vw]">
+      <section id="services" className="py-16 lg:py-24 bg-emerald-50/40 border-y border-emerald-100/60">
+        <div className="px-6 sm:px-8 lg:px-[5vw]">
           {/* Header */}
-          <FadeUp className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <FadeUp className="mb-12 lg:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
-              <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-4">
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
                 What we do
-              </p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 leading-[1.1]">
                 Services
               </h2>
             </div>
-            <p className="text-neutral-500 text-base leading-relaxed max-w-sm lg:text-right">
+            <p className="text-neutral-500 text-[0.95rem] sm:text-lg lg:text-xl leading-relaxed max-w-sm lg:text-right">
               End-to-end software development — one team, not five vendors.
             </p>
           </FadeUp>
 
           {/* Grid */}
-          <div className="border border-emerald-100 rounded-2xl overflow-hidden  shadow-emerald-100/50">
+          <div className="border border-emerald-100 rounded-2xl overflow-hidden shadow-emerald-100/50">
             {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-emerald-100/70">
               {services.slice(0, 3).map((s, i) => (
@@ -283,9 +283,9 @@ export default function Home() {
                     <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100 group-hover:bg-emerald-100 group-hover:border-emerald-200 flex items-center justify-center text-emerald-500 group-hover:text-emerald-700 transition-all mb-6 flex-shrink-0">
                       {s.icon}
                     </div>
-                    <h3 className="font-semibold text-lg text-neutral-900 mb-2 leading-snug">{s.title}</h3>
-                    <p className="text-neutral-500 text-sm leading-relaxed flex-1">{s.desc}</p>
-                    <div className="flex items-center gap-1.5 mt-6 text-xs font-semibold text-emerald-300 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="font-bold text-xl text-neutral-900 mb-3 leading-snug">{s.title}</h3>
+                    <p className="text-neutral-500 text-sm sm:text-base leading-relaxed flex-1">{s.desc}</p>
+                    <div className="flex items-center gap-1.5 mt-6 text-sm font-semibold text-emerald-300 group-hover:text-emerald-600 transition-colors">
                       Learn more
                       <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2">
                         <path d="M2 7h10M8 3l4 4-4 4" />
@@ -307,12 +307,12 @@ export default function Home() {
                     <span className="absolute top-7 right-8 font-mono text-xs font-bold text-emerald-200 group-hover:text-emerald-400 transition-colors select-none">
                       {String(i + 4).padStart(2, "0")}
                     </span>
-                    <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100 group-hover:bg-emerald-100 group-hover:border-emerald-200 flex items-center justify-center text-emerald-500 group-hover:text-emerald-700 transition-all mb-6 flex-shrink-0">
+                    <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-200 group-hover:bg-emerald-100 group-hover:border-emerald-200 flex items-center justify-center text-emerald-500 group-hover:text-emerald-700 transition-all mb-6 flex-shrink-0">
                       {s.icon}
                     </div>
-                    <h3 className="font-semibold text-lg text-neutral-900 mb-2 leading-snug">{s.title}</h3>
-                    <p className="text-neutral-500 text-sm leading-relaxed flex-1">{s.desc}</p>
-                    <div className="flex items-center gap-1.5 mt-6 text-xs font-semibold text-emerald-300 group-hover:text-emerald-600 transition-colors">
+                    <h3 className="font-bold text-xl text-neutral-900 mb-3 leading-snug">{s.title}</h3>
+                    <p className="text-neutral-500 text-sm sm:text-base leading-relaxed flex-1">{s.desc}</p>
+                    <div className="flex items-center gap-1.5 mt-6 text-sm font-semibold text-emerald-300 group-hover:text-emerald-600 transition-colors">
                       Learn more
                       <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2">
                         <path d="M2 7h10M8 3l4 4-4 4" />
@@ -340,14 +340,14 @@ export default function Home() {
       </section>
 
       {/* Featured Work */}
-      <section id="work" className="py-12 lg:py-24 bg-white">
-        <div className="px-[5vw]">
-          <FadeUp className="mb-10 lg:mb-16 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+      <section id="work" className="py-16 lg:py-24 bg-white">
+        <div className="px-6 sm:px-8 lg:px-[5vw]">
+          <FadeUp className="mb-12 lg:mb-16 flex flex-col sm:flex-row sm:items-end justify-between gap-6">
             <div>
-              <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
                 Featured work
-              </p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 leading-[1.1]">
                 Projects we&apos;re proud of
               </h2>
             </div>
@@ -362,12 +362,12 @@ export default function Home() {
             </a>
           </FadeUp>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
             {projects.map((p, i) => (
               <FadeUp key={p.name} delay={i * 100}>
                 <div className="rounded-2xl overflow-hidden border border-neutral-200 hover:border-neutral-300 hover:shadow-xl hover:shadow-neutral-100 transition-all duration-300 group flex flex-col sm:flex-row h-full">
                   {/* Screenshot / visual side */}
-                  <div className="w-full h-44 sm:h-auto sm:w-2/5 flex-shrink-0 flex flex-col border-b sm:border-b-0 sm:border-r border-neutral-200">
+                  <div className="w-full h-34 sm:h-auto sm:w-2/5 flex-shrink-0 flex flex-col border-b sm:border-b-0 sm:border-r border-neutral-200">
                     <div className="bg-neutral-50 px-2 py-2 flex items-center gap-1 flex-shrink-0 border-b border-neutral-200">
                       <span className="w-1.5 h-1.5 rounded-full bg-neutral-300" />
                       <span className="w-1.5 h-1.5 rounded-full bg-neutral-300" />
@@ -397,28 +397,28 @@ export default function Home() {
                   </div>
 
                   {/* Info side */}
-                  <div className="w-full sm:w-3/5 bg-white p-5 flex flex-col justify-between">
+                  <div className="w-full sm:w-3/5 bg-white px-6 py-6 lg:px-8 lg:py-7 flex flex-col justify-between">
                     <div>
-                      <p className="text-emerald-600 text-[10px] font-semibold uppercase tracking-widest mb-1.5">
+                      <p className="text-emerald-600 text-[11px] font-semibold uppercase tracking-wider mb-2">
                         {p.category}
                       </p>
-                      <h3 className="font-bold text-base text-neutral-900 mb-2 leading-snug">{p.name}</h3>
-                      <p className="text-neutral-500 text-xs leading-relaxed">{p.desc}</p>
+                      <h3 className="font-bold text-xl sm:text-2xl text-neutral-900 mb-2 leading-snug">{p.name}</h3>
+                      <p className="text-neutral-500 text-sm sm:text-base leading-relaxed mb-4">{p.desc}</p>
                     </div>
 
-                    <div className="mt-4 pt-4 border-t border-neutral-100">
-                      <div className="flex flex-wrap gap-1 mb-3">
+                    <div className="mt-4 pt-3.5 border-t border-neutral-100">
+                      <div className="flex flex-wrap gap-1.5 mb-3.5">
                         {p.tags.map((tag) => (
                           <span
-                            key={tag}
-                            className="text-[9px] font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100"
+                              key={tag}
+                              className="text-[10px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100"
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-1 text-[10px] font-semibold text-neutral-400">
+                      <div className="flex items-center pt-3 justify-between">
+                        <div className="flex items-center gap-1 text-xs font-semibold text-neutral-400">
                           <span className="text-emerald-500">{p.statIcon}</span>
                           {p.stat}
                         </div>
@@ -426,7 +426,7 @@ export default function Home() {
                           href={`https://${p.url}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
+                          className="inline-flex items-center gap-1 text-sm font-semibold text-emerald-600 hover:text-emerald-700 transition-colors"
                         >
                           View site
                           <svg width="10" height="10" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2">
@@ -444,12 +444,16 @@ export default function Home() {
       </section>
 
       {/* Stats Strip */}
-      <section className="py-10 lg:py-20 bg-neutral-950">
-        <div className="px-[5vw]">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-800 rounded-2xl overflow-hidden border border-neutral-800">
+      <section className="py-12 lg:py-16 bg-neutral-950 relative overflow-hidden">
+        {/* Background glow */}
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
+
+        <div className="relative z-10 px-6 sm:px-8 lg:px-[5vw]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-neutral-800/60 rounded-2xl overflow-hidden border border-neutral-800/60">
             {stats.map((s, i) => (
               <FadeUp key={s.label} delay={i * 80}>
-                <div className="bg-neutral-950 px-8 py-10 flex flex-col items-center text-center">
+                <div className="bg-neutral-950/40 backdrop-blur-sm px-8 py-10 flex flex-col items-center text-center">
                   <p className="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight">{s.value}</p>
                   <p className="text-neutral-500 text-sm mt-2 leading-snug">{s.label}</p>
                 </div>
@@ -460,23 +464,23 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="py-24">
-        <div className="px-[5vw]">
+      <section id="about" className="py-16 lg:py-24">
+        <div className="px-6 sm:px-8 lg:px-[5vw]">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <FadeUp>
-              <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
                 About us
-              </p>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-6">
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 leading-[1.1] mb-6">
                 Small team.{" "}
                 <span className="text-emerald-600">Big outcomes.</span>
               </h2>
-              <p className="text-neutral-500 leading-relaxed mb-5">
+              <p className="text-neutral-500 text-[0.95rem] sm:text-lg lg:text-xl leading-relaxed mb-5">
                 Beond Innovations is a software development studio focused on building
                 products that actually solve problems. We work closely with clients —
                 not as a vendor, but as a technical co-founder you can trust.
               </p>
-              <p className="text-neutral-500 leading-relaxed mb-8">
+              <p className="text-neutral-500 text-[0.95rem] sm:text-lg lg:text-xl leading-relaxed mb-8">
                 We keep teams lean and communication direct. You get senior-level
                 expertise, fast turnarounds, and code you&apos;re proud to ship.
               </p>
@@ -560,13 +564,13 @@ export default function Home() {
       <TeamSection />
 
       {/* Manifesto */}
-      <section className="py-12 lg:py-24 bg-white border-y border-neutral-100">
-        <div className="px-[5vw]">
-          <FadeUp className="mb-10 lg:mb-16">
-            <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
+      <section className="py-16 lg:py-24 bg-white border-y border-neutral-100">
+        <div className="px-6 sm:px-8 lg:px-[5vw]">
+          <FadeUp className="mb-12 lg:mb-16">
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
               What we believe
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 leading-[1.1]">
               We believe...
             </h2>
           </FadeUp>
@@ -580,7 +584,7 @@ export default function Home() {
                   <p className="text-neutral-900 text-xl md:text-2xl lg:text-3xl font-bold leading-snug mt-4 mb-4 group-hover:text-emerald-600 transition-colors duration-300">
                     {belief.headline}
                   </p>
-                  <p className="text-neutral-500 text-sm leading-relaxed">{belief.sub}</p>
+                  <p className="text-neutral-500 text-sm sm:text-base leading-relaxed">{belief.sub}</p>
                 </div>
               </FadeUp>
             ))}
@@ -589,20 +593,20 @@ export default function Home() {
       </section>
 
       {/* Why Us */}
-      <section id="why" className="py-12 lg:py-24 bg-white">
-        <div className="px-[5vw]">
+      <section id="why" className="py-16 lg:py-24 bg-white">
+        <div className="px-6 sm:px-8 lg:px-[5vw]">
           {/* Header */}
-          <FadeUp className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+          <FadeUp className="mb-12 lg:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div>
-              <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-4">
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
                 Why us
-              </p>
-              <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-neutral-900 leading-none">
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 leading-[1.1]">
                 What makes us<br className="hidden sm:block" /> different
               </h2>
             </div>
-            <p className="text-neutral-400 text-base leading-relaxed max-w-xs lg:text-right">
-              Not just another agency. Here's why founders and CTOs choose to work with us.
+            <p className="text-neutral-500 text-[0.95rem] sm:text-lg lg:text-xl leading-relaxed max-w-xs lg:text-right">
+              Not just another agency. Here&apos;s why founders and CTOs choose to work with us.
             </p>
           </FadeUp>
 
@@ -621,7 +625,7 @@ export default function Home() {
                     <h3 className="text-2xl md:text-3xl font-bold text-neutral-900 mb-3 leading-tight group-hover:text-emerald-700 transition-colors duration-300">
                       {item.title}
                     </h3>
-                    <p className="text-neutral-500 text-base leading-relaxed max-w-2xl">
+                    <p className="text-neutral-500 text-sm sm:text-base leading-relaxed max-w-2xl">
                       {item.desc}
                     </p>
                   </div>
@@ -638,13 +642,17 @@ export default function Home() {
       </section>
 
       {/* Process */}
-      <section id="process" className="py-24 bg-neutral-950 text-white">
-        <div className="px-[5vw]">
-          <FadeUp className="mb-16">
-            <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-3">
+      <section id="process" className="py-16 lg:py-24 bg-neutral-950 text-white relative overflow-hidden">
+        {/* Background glow */}
+        <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[400px] rounded-full bg-emerald-500/10 blur-3xl pointer-events-none" />
+        <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-emerald-500/60 to-transparent" />
+
+        <div className="relative z-10 px-6 sm:px-8 lg:px-[5vw]">
+          <FadeUp className="mb-12 lg:mb-16">
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-semibold tracking-wide mb-6">
               How we work
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.1]">
               Our process
             </h2>
           </FadeUp>
@@ -656,8 +664,8 @@ export default function Home() {
                   <div className="text-emerald-500 font-mono text-sm font-bold mb-4 group-hover:text-emerald-400 transition-colors">
                     {step.num}
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{step.title}</h3>
-                  <p className="text-neutral-400 text-sm leading-relaxed">{step.desc}</p>
+                  <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
+                  <p className="text-neutral-400 text-sm sm:text-base leading-relaxed">{step.desc}</p>
                 </div>
               </FadeUp>
             ))}
@@ -666,13 +674,13 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section id="testimonials" className="py-24 bg-neutral-50">
-        <div className="px-[5vw]">
-          <FadeUp className="mb-16">
-            <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
+      <section id="testimonials" className="py-16 lg:py-24 bg-neutral-50">
+        <div className="px-6 sm:px-8 lg:px-[5vw]">
+          <FadeUp className="mb-12 lg:mb-16">
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
               Client stories
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 leading-[1.1]">
               What clients say
             </h2>
           </FadeUp>
@@ -683,7 +691,7 @@ export default function Home() {
                   <svg className="text-emerald-200 mb-6 flex-shrink-0" width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
                     <path d="M10 8C6.686 8 4 10.686 4 14v10h10V14H7.5C7.5 12.067 9.067 10.5 11 10.5V8h-1zm14 0c-3.314 0-6 2.686-6 6v10h10V14h-6.5c0-1.933 1.567-3.5 3.5-3.5V8h-1z"/>
                   </svg>
-                  <p className="text-neutral-600 text-sm leading-relaxed flex-1 mb-8">{t.quote}</p>
+                  <p className="text-neutral-600 text-sm sm:text-base leading-relaxed flex-1 mb-8">{t.quote}</p>
                   <div className="flex items-center gap-3">
                     <div className="w-9 h-9 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center text-xs font-bold flex-shrink-0">
                       {t.initials}
@@ -704,8 +712,8 @@ export default function Home() {
       <FAQSection />
 
       {/* CTA / Contact */}
-      <section id="contact" className="py-24 bg-neutral-50">
-        <div className="px-[5vw]">
+      <section id="contact" className="py-16 lg:py-24 bg-neutral-50">
+        <div className="px-6 sm:px-8 lg:px-[5vw]">
           <FadeUp>
             <div className="relative bg-neutral-950 rounded-3xl px-8 md:px-16 py-16 md:py-20 overflow-hidden">
               {/* Background glow */}
@@ -714,13 +722,13 @@ export default function Home() {
 
               <div className="relative flex flex-col lg:flex-row items-center justify-between gap-10">
                 <div className="text-center lg:text-left max-w-xl">
-                  <p className="text-emerald-400 text-sm font-semibold uppercase tracking-widest mb-4">
+                  <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/25 text-emerald-400 text-xs font-semibold tracking-wide mb-6">
                     Let&apos;s build together
-                  </p>
-                  <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-white mb-5">
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white leading-[1.1] mb-5">
                     Ready to build something great?
                   </h2>
-                  <p className="text-neutral-400 text-base md:text-lg leading-relaxed">
+                  <p className="text-neutral-400 text-sm sm:text-base lg:text-lg leading-relaxed">
                     Tell us about your project. We&apos;ll get back to you within 24 hours with
                     honest thoughts and a clear path forward.
                   </p>
