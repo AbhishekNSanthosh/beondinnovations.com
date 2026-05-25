@@ -177,20 +177,20 @@ function TagsMarquee({ tags, tagBg }: { tags: string[]; tagBg: string }) {
 
 export default function TeamSection() {
   return (
-    <section id="team" className="py-12 lg:py-24 bg-white border-t border-neutral-100">
-      <div className="px-[5vw]">
+    <section id="team" className="py-16 lg:py-24 bg-white border-t border-neutral-100">
+      <div className="px-6 sm:px-8 lg:px-[5vw]">
         {/* Header */}
-        <FadeUp className="mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+        <FadeUp className="mb-12 lg:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
           <div>
-            <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-4">
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
               The people
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900">
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 leading-[1.1]">
               Three masterbrains.{" "}
               <span className="text-emerald-600">No egos.</span>
             </h2>
           </div>
-          <p className="text-neutral-400 text-sm leading-relaxed max-w-xs lg:text-right font-mono">
+          <p className="text-neutral-500 text-[0.95rem] sm:text-lg lg:text-xl leading-relaxed max-w-sm lg:text-right font-mono">
             Identities withheld by design.<br />
             The work is the only introduction needed.
           </p>
@@ -236,7 +236,7 @@ export default function TeamSection() {
                       </p>
                     </div>
 
-                    <p className="text-neutral-500 text-sm leading-relaxed flex-1">
+                    <p className="text-neutral-500 text-sm sm:text-base leading-relaxed flex-1">
                       {member.bio}
                     </p>
 

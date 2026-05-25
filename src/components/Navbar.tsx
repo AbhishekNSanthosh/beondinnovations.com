@@ -51,17 +51,20 @@ export default function Navbar() {
             : "bg-transparent border-transparent"
         }`}
       >
-        <nav className="px-5 md:px-[5vw] h-16 flex items-center justify-between">
-          <Link href="/" className="font-bold text-xl tracking-tight text-neutral-900">
+        <nav className="px-6 sm:px-8 lg:px-[5vw] h-16 md:h-20 flex items-center justify-between">
+          <Link
+            href="/"
+            className="font-black text-xl md:text-3xl tracking-tight text-neutral-900"
+          >
             beond<span className="text-emerald-600">.</span>
           </Link>
 
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-8 lg:gap-10">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className="text-sm text-neutral-600 hover:text-neutral-900 transition-colors"
+                  className="text-sm md:text-base text-neutral-600 hover:text-neutral-900 transition-colors"
                 >
                   {l.label}
                 </a>
@@ -71,7 +74,7 @@ export default function Navbar() {
 
           <a
             href="#contact"
-            className="hidden md:inline-flex items-center px-4 py-2 rounded-lg bg-neutral-900 text-white text-sm font-medium hover:bg-emerald-600 transition-colors"
+            className="hidden md:inline-flex items-center justify-center px-5 py-2 rounded-xl bg-neutral-900 text-white text-sm font-semibold hover:bg-emerald-600 transition-all duration-200 hover:-translate-y-0.5"
           >
             Get in touch
           </a>
@@ -159,7 +162,14 @@ export default function Navbar() {
               className="mt-6 flex items-center justify-center gap-2 px-5 py-4 rounded-2xl bg-neutral-900 text-white text-sm font-semibold active:bg-emerald-600 transition-colors"
             >
               Start a project
-              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 16 16"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+              >
                 <path d="M3 8h10M9 4l4 4-4 4" />
               </svg>
             </a>
@@ -167,9 +177,12 @@ export default function Navbar() {
             {/* Footer note */}
             <div className="mt-auto pt-8 flex flex-col items-center gap-1">
               <p className="text-[10px] text-neutral-400">
-                &copy; {new Date().getFullYear()} Beond Innovations LLP. All rights reserved.
+                &copy; {new Date().getFullYear()} Beond Innovations LLP. All
+                rights reserved.
               </p>
-              <p className="text-[10px] text-neutral-400">Innovation, Beyond Limits.</p>
+              <p className="text-[10px] text-neutral-400">
+                Innovation, Beyond Limits.
+              </p>
             </div>
           </div>
         </div>

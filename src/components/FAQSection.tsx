@@ -43,21 +43,21 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-12 lg:py-24 bg-white">
+    <section id="faq" className="py-16 lg:py-24 bg-white">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
-      <div className="px-[5vw]">
+      <div className="px-6 sm:px-8 lg:px-[5vw]">
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-24 items-start">
           <FadeUp className="lg:sticky lg:top-28 lg:w-72 flex-shrink-0">
-            <p className="text-emerald-600 text-sm font-semibold uppercase tracking-widest mb-3">
+            <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
               FAQ
-            </p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-neutral-900 mb-3 lg:mb-5">
+            </div>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 leading-[1.1] mb-3 lg:mb-5">
               Common questions
             </h2>
-            <p className="text-neutral-500 text-sm leading-relaxed">
+            <p className="text-neutral-500 text-sm sm:text-base lg:text-lg leading-relaxed">
               Don&apos;t see your question here?{" "}
               <a href="mailto:beondinnovations@gmail.com" className="text-emerald-600 hover:underline">
                 Just ask us directly.
@@ -99,7 +99,7 @@ export default function FAQSection() {
                       open === i ? "max-h-64 opacity-100" : "max-h-0 opacity-0"
                     }`}
                   >
-                    <p className="px-6 pb-6 text-neutral-500 text-sm leading-relaxed">
+                    <p className="px-6 pb-6 text-neutral-500 text-sm sm:text-base leading-relaxed">
                       {faq.a}
                     </p>
                   </div>
