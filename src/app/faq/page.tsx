@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FAQSection from "@/components/FAQSection";
 
 export const metadata: Metadata = {
-  title: "FAQ — Frequently Asked Questions | Beond Innovations",
+  title: "FAQ",
   description:
     "Answers to common questions about working with Beond Innovations — project timelines, code ownership, day-to-day collaboration, pricing, and more.",
   keywords: [

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FadeUp from "@/components/FadeUp";
 
 export const metadata: Metadata = {
-  title: "Contact Us — Start Your Project | Beond Innovations",
+  title: "Contact",
   description:
     "Get in touch with Beond Innovations. Tell us about your project and we'll get back within 24 hours with honest thoughts and a clear path forward. Email: beondinnovations@gmail.com",
   keywords: [

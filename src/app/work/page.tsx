@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FadeUp from "@/components/FadeUp";
 
 export const metadata: Metadata = {
-  title: "Our Work — Featured Projects & Case Studies | Beond Innovations",
+  title: "Work",
   description:
     "Explore projects built by Beond Innovations — web apps, mobile apps, and SaaS products for startups and businesses. See how we turn ideas into production-ready software.",
   keywords: [

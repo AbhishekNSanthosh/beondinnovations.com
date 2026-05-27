@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FadeUp from "@/components/FadeUp";
 
 export const metadata: Metadata = {
-  title: "About Us — Small Team, Big Outcomes | Beond Innovations Kerala",
+  title: "About",
   description:
     "Beond Innovations is a software development studio based in Kerala, India. We work closely with clients as a technical co-founder you can trust — senior-level expertise, fast turnarounds, and code you're proud to ship.",
   keywords: [

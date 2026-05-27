@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FadeUp from "@/components/FadeUp";
 
 export const metadata: Metadata = {
-  title: "Our Process — How We Build Software | Beond Innovations",
+  title: "Process",
   description:
     "Learn how Beond Innovations works: Discovery, Plan, Build, Launch. A transparent, structured process that keeps you informed at every step — no surprises.",
   keywords: [

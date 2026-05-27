@@ -5,7 +5,7 @@ import FadeUp from "@/components/FadeUp";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "ERP Products — Academic, HR, Finance & More | Beond Innovations",
+  title: "Products",
   description:
     "Enterprise-grade ERP products built for schools, colleges, and businesses — Academic Management, Attendance, HR, Inventory, Finance, and Library Management systems.",
   keywords: [

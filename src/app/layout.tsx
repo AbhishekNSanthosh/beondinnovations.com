@@ -14,7 +14,7 @@ const siteUrl = "https://beondinnovations.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Beond Innovations — Website Design & Software Development Studio | Kerala, India",
+    default: "Beond Innovations",
     template: "%s | Beond Innovations",
   },
   description:

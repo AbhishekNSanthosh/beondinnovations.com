@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import TeamSection from "@/components/TeamSection";
 
 export const metadata: Metadata = {
-  title: "Our Team — Meet the People Behind Beond Innovations",
+  title: "Team",
   description:
     "Meet the engineers and designers at Beond Innovations. A small, senior team building software for startups and businesses worldwide from Kerala, India.",
   keywords: [

@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import FadeUp from "@/components/FadeUp";
 
 export const metadata: Metadata = {
-  title: "Services — Web Development, Mobile Apps, UI/UX, MVP & Tech Consulting",
+  title: "Services",
   description:
     "Beond Innovations offers end-to-end software development services: web development, mobile app development, API & backend, MVP development, UI/UX design, and tech consulting. Based in Kerala, India, working globally.",
   keywords: [
