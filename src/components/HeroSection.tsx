@@ -59,7 +59,7 @@ export default function HeroSection() {
         <div className="flex flex-col lg:flex-row lg:items-center gap-10 lg:gap-12 xl:gap-20">
 
           {/* ── Copy ── */}
-          <div className="flex-1 lg:max-w-2xl pt-6 lg:pt-0">
+          <div className="flex-1 lg:max-w-2xl pt-6 -lg:pt-6">
 
             <div className="hero-badge inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6 lg:mb-8">
               <span className="relative flex h-2 w-2">

@@ -86,25 +86,6 @@ const projects = [
       </svg>
     ),
   },
-  {
-    name: "GrabUrPass",
-    url: "graburpass.com",
-    category: "Events · Mobile + Web",
-    desc: "A seamless event pass management platform — attendees grab and store digital passes, organizers manage check-ins in real time. Built for speed, scale, and zero paper.",
-    tags: ["Next.js", "React Native", "Supabase"],
-    image: null,
-    logo: "/projects/graburpass_brandLogo.png",
-    gradient: "from-red-950 via-red-900 to-rose-950",
-    accent: "#ef4444",
-    letter: "G",
-    stat: "In development",
-    statIcon: (
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </svg>
-    ),
-  },
   // Sam Select — hidden for now
   // {
   //   name: "Sam Select",
@@ -118,25 +99,6 @@ const projects = [
   //   letter: "S",
   //   stat: "In development",
   // },
-  {
-    name: "Edumate",
-    url: "edumate.app",
-    category: "EdTech · Platform",
-    desc: "An all-in-one institute management system — covering admissions, attendance, CRM, and department workflows. Built for schools and coaching centres that need structure without the enterprise price tag.",
-    tags: ["Next.js", "Firebase"],
-    image: null,
-    logo: "/projects/Edumate.svg",
-    gradient: "from-blue-950 via-blue-900 to-indigo-950",
-    accent: "#1F75FE",
-    letter: "E",
-    stat: "In development",
-    statIcon: (
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M12 6v6l4 2" />
-      </svg>
-    ),
-  },
 ];
 
 const stats = [
@@ -331,6 +293,130 @@ export default function Home() {
               className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600/70 hover:text-emerald-700 transition-colors"
             >
               Have something specific in mind? Let&apos;s talk
+              <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M2 7h10M8 3l4 4-4 4" />
+              </svg>
+            </a>
+          </FadeUp>
+        </div>
+      </section>
+
+      {/* Products */}
+      <section id="products" className="py-16 lg:py-24 bg-white border-y border-neutral-100">
+        <div className="px-6 sm:px-8 lg:px-[5vw]">
+          <FadeUp className="mb-12 lg:mb-16 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div>
+              <div className="inline-flex items-center px-3.5 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-semibold tracking-wide mb-6">
+                Our products
+              </div>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-neutral-900 leading-[1.1]">
+                ERP systems, built in-house.
+              </h2>
+            </div>
+            <p className="text-neutral-500 text-[0.95rem] sm:text-lg lg:text-xl leading-relaxed max-w-sm lg:text-right">
+              Purpose-built software for institutions and businesses — not off-the-shelf, not generic.
+            </p>
+          </FadeUp>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                  </svg>
+                ),
+                name: "Academic Management System",
+                desc: "Admissions, timetables, exams, fees, and parent portals — one unified platform for educational institutions.",
+                tag: "Education ERP",
+              },
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <rect x="3" y="4" width="18" height="18" rx="2" />
+                    <path d="M16 2v4M8 2v4M3 10h18" />
+                    <path d="M9 16l2 2 4-4" />
+                  </svg>
+                ),
+                name: "Attendance Management System",
+                desc: "Biometric and app-based attendance for staff and students with real-time reporting and automated alerts.",
+                tag: "HR · Education",
+              },
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
+                    <circle cx="9" cy="7" r="4" />
+                    <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
+                  </svg>
+                ),
+                name: "HR Management System",
+                desc: "Recruitment, payroll, performance reviews, and compliance — end-to-end HR for institutions and SMEs.",
+                tag: "Human Resources",
+              },
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z" />
+                    <path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12" />
+                  </svg>
+                ),
+                name: "Inventory & Asset Management",
+                desc: "Stock tracking, procurement workflows, and asset lifecycle management with audit-ready reports.",
+                tag: "Operations",
+              },
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <rect x="2" y="5" width="20" height="14" rx="2" />
+                    <path d="M2 10h20M6 15h2M10 15h4" />
+                  </svg>
+                ),
+                name: "Finance & Accounting ERP",
+                desc: "General ledger, invoicing, GST-ready tax management, and financial dashboards for institutions and SMEs.",
+                tag: "Finance",
+              },
+              {
+                icon: (
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                    <path d="M4 19.5A2.5 2.5 0 016.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" />
+                    <path d="M8 7h8M8 11h6" />
+                  </svg>
+                ),
+                name: "Library Management System",
+                desc: "Catalogue books, manage borrowers, track issue and return workflows, and send automated due-date reminders.",
+                tag: "Education ERP",
+              },
+            ].map((product, i) => (
+              <FadeUp key={product.name} delay={i * 70}>
+                <div className="group bg-white rounded-2xl border border-neutral-200 hover:border-emerald-200 hover:shadow-lg hover:shadow-emerald-50 transition-all duration-300 p-7 flex flex-col h-full">
+                  <div className="w-11 h-11 rounded-xl bg-emerald-50 border border-emerald-100 group-hover:bg-emerald-100 group-hover:border-emerald-200 flex items-center justify-center text-emerald-500 group-hover:text-emerald-700 transition-all mb-5 flex-shrink-0">
+                    {product.icon}
+                  </div>
+                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-semibold tracking-wide bg-neutral-100 text-neutral-500 mb-3 w-fit">
+                    {product.tag}
+                  </span>
+                  <h3 className="font-bold text-lg text-neutral-900 mb-2.5 leading-snug">{product.name}</h3>
+                  <p className="text-neutral-500 text-sm leading-relaxed flex-1">{product.desc}</p>
+                  <div className="flex items-center gap-1.5 mt-6 text-sm font-semibold text-emerald-300 group-hover:text-emerald-600 transition-colors">
+                    Learn more
+                    <svg width="11" height="11" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2.2">
+                      <path d="M2 7h10M8 3l4 4-4 4" />
+                    </svg>
+                  </div>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+
+          <FadeUp delay={200} className="mt-10 flex items-center justify-center">
+            <a
+              href="/products"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-600/70 hover:text-emerald-700 transition-colors"
+            >
+              See all products and request a demo
               <svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M2 7h10M8 3l4 4-4 4" />
               </svg>

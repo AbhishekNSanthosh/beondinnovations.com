@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const links = [
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
-  { label: "Team", href: "#team" },
-  { label: "Process", href: "#process" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/services" },
+  { label: "Products", href: "/products" },
+  { label: "Work", href: "/work" },
+  { label: "About", href: "/about" },
+  { label: "Team", href: "/team" },
+  { label: "Process", href: "/process" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Contact", href: "/contact" },
 ];
 
 
@@ -62,22 +63,22 @@ export default function Navbar() {
           <ul className="hidden md:flex items-center gap-8 lg:gap-10">
             {links.map((l) => (
               <li key={l.href}>
-                <a
+                <Link
                   href={l.href}
                   className="text-sm md:text-base text-neutral-600 hover:text-neutral-900 transition-colors"
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
 
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="hidden md:inline-flex items-center justify-center px-5 py-2 rounded-xl bg-neutral-900 text-white text-sm font-semibold hover:bg-emerald-600 transition-all duration-200 hover:-translate-y-0.5"
           >
             Get in touch
-          </a>
+          </Link>
 
           <button
             className="md:hidden relative z-50 w-10 h-10 flex items-center justify-center rounded-xl text-neutral-700 active:bg-neutral-100 transition-colors"
@@ -130,7 +131,7 @@ export default function Navbar() {
             {/* Nav links */}
             <nav className="flex flex-col">
               {links.map((l, i) => (
-                <a
+                <Link
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
@@ -151,13 +152,13 @@ export default function Navbar() {
                   >
                     <path d="M3 8h10M9 4l4 4-4 4" />
                   </svg>
-                </a>
+                </Link>
               ))}
             </nav>
 
             {/* CTA */}
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               onClick={() => setOpen(false)}
               className="mt-6 flex items-center justify-center gap-2 px-5 py-4 rounded-2xl bg-neutral-900 text-white text-sm font-semibold active:bg-emerald-600 transition-colors"
             >
@@ -172,7 +173,7 @@ export default function Navbar() {
               >
                 <path d="M3 8h10M9 4l4 4-4 4" />
               </svg>
-            </a>
+            </Link>
 
             {/* Footer note */}
             <div className="mt-auto pt-8 flex flex-col items-center gap-1">
