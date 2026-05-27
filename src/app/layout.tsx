@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import SplashScreen from "@/components/SplashScreen";
+import { Analytics } from "@vercel/analytics/next";
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -508,7 +509,7 @@ const organizationSchema = {
   },
   image: `${siteUrl}/og-image.png`,
   email: "beondinnovations@gmail.com",
-  telephone: "+917907247909",
+  telephone: "+919946846101",
   address: {
     "@type": "PostalAddress",
     streetAddress: "PB102, Carmel College of Engineering & Technology, Punnapra",
@@ -551,7 +552,7 @@ const localBusinessSchema = {
   alternateName: ["Beond", "beond", "Beond Studio"],
   image: `${siteUrl}/og-image.png`,
   url: siteUrl,
-  telephone: "+917907247909",
+  telephone: "+919946846101",
   email: "beondinnovations@gmail.com",
   priceRange: "$$",
   currenciesAccepted: "INR, USD",
@@ -837,6 +838,7 @@ export default function RootLayout({
         />
         <SplashScreen />
         {children}
+        <Analytics />
       </body>
     </html>
   );

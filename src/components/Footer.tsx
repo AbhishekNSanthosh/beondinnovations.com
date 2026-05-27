@@ -19,7 +19,7 @@ const socialLinks = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/company/beondinnovations",
+    href: "https://linkedin.com/company/beond-innovations",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
         <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
@@ -28,7 +28,7 @@ const socialLinks = [
   },
   {
     label: "Twitter / X",
-    href: "https://x.com/beondinnovations",
+    href: "https://x.com/beondinnovation",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
         <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
@@ -93,6 +93,8 @@ export default function Footer() {
               key={s.label}
               href={s.href}
               aria-label={s.label}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-xl border border-neutral-800 text-neutral-500 active:text-emerald-400 active:border-emerald-500/40 transition-colors"
             >
               {s.icon}
@@ -135,13 +137,13 @@ export default function Footer() {
             beondinnovations@gmail.com
           </a>
           <a
-            href="tel:+917907247909"
+            href="tel:+919946846101"
             className="flex items-center gap-2 text-xs text-neutral-500"
           >
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className="text-emerald-500 shrink-0">
               <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.5 19.78 19.78 0 01.07 4.91 2 2 0 012 2.69h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 10.1a16 16 0 006.22 6.22l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
             </svg>
-            +91 7907247909
+            +91 9946846101
           </a>
         </div>
 
@@ -186,6 +188,8 @@ export default function Footer() {
                     key={s.label}
                     href={s.href}
                     aria-label={s.label}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group/icon w-9 h-9 flex items-center justify-center rounded-lg border border-neutral-800 text-neutral-500 hover:text-emerald-400 hover:border-emerald-500/40 hover:bg-emerald-500/8 transition-all duration-200"
                   >
                     {s.icon}
@@ -243,8 +247,8 @@ export default function Footer() {
                     <path d="M1.5 8.5l7-7M8.5 1.5H3M8.5 1.5v5.5" />
                   </svg>
                 </a>
-                <a href="tel:+917907247909" className="inline-flex items-center gap-1 mt-2 text-xs text-emerald-500 hover:text-emerald-400 transition-colors">
-                  +91 7907247909
+                <a href="tel:+919946846101" className="inline-flex items-center gap-1 mt-2 text-xs text-emerald-500 hover:text-emerald-400 transition-colors">
+                  +91 9946846101
                   <svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="currentColor" strokeWidth="1.5">
                     <path d="M1.5 8.5l7-7M8.5 1.5H3M8.5 1.5v5.5" />
                   </svg>
